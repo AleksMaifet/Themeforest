@@ -1,46 +1,91 @@
-# Getting Started with Create React App
+# Tестовое задание Modsen Themeforest Ensom
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Содержание
 
-## Available Scripts
+- [Техническое задание](#Техническое-задание)
+- [Используемые технологии](#Используемые-технологии)
+- [Структура проекта](#Структура-проекта)
+- [Тестирование](#Тестирование)
+- [Как начать](#Как-начать)
+- [Полезные ссылки](#Полезные-ссылки)
 
-In the project directory, you can run:
+## Техническое задание
+Необходимо реализовать React приложение "Modsen Themeforest" по предоставленному дизайну из Figma. Приложение должно предоставлять возможность отправки email писем, оплаты, показа превью видео, elastic search, использование интерактивной карты.
 
-### `yarn start`
+#### Необходимый функционал:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- отправка писем на электронную почту
+- просмотр видео на главной старице
+- оплата
+- elastic search
+- интерактивная карта
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Дополнительный функционал
 
-### `yarn test`
+- Развернуть приложение на хостиге (heroky, vercel).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Пример графического представления:
 
-### `yarn build`
+Ссылка на макет: [Макет "Modsen Themeforest"](https://www.figma.com/file/RH6Tg2icMlc7M2DdHEJ9Bl/Themeforest-Modsen-Template-(Community)?node-id=236%3A74554).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Также проект предполагает:
+- Организацию файловой структуры описанной в [style guide](https://docs.google.com/document/d/1bRFwwCk_eG7dWAhFss3KHHl-qQGiYK_u43GGQBxMN0k/edit).
+- Обработку ошибок через паттерн *"Error Boundaries"*.
+- Проверку типов с использованием Typescript.
+- Использование алиасов для импортирования файлов.
+- Реализация должна быть выполнена без использования UI библиотек.
+- обязательная валидация всех текстовых полей с использованием *yup*.
+- Оптимизация дизайна под мобильные устройства.
+- пагинация больших списков
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Описание экранов
+1. [Главная страница](https://www.figma.com/file/RH6Tg2icMlc7M2DdHEJ9Bl/Themeforest-Modsen-Template-(Community)?node-id=255%3A18588). Данный экран включает в себя разбивку на несколько блоков. Блок с базовой информацией (также при нажатии на кнопку Whatch the demo на фоне текста должно запускаться видео на выбор выполняющего). Навигация из блоков должна работать следующим образом: верхний блок с Watch the demo при нажатии на Learn More должна переводить на страницу Services, следующий блок при нажатии на одну из кнопок должен переводить на страницу Solutions, блок What our customers say имеет горизонтальный список включающий в себя по 2 карточки с отзывами с возможность навигации на следующую страницу списка с использованием двух, блок Our pricing при нажатии на одну из кнопок Get started должен открывать модальное окно с краткой сводкой об тарифе и формой для заполнения банковских данных (модальное окно по дизайну должно быть похоже на увеличенную карточку с тарифом, но с наличием полей для заполнения данных), блок Blog при нажатии на Read more должен переводить на страницу [полного описания записи](https://www.figma.com/file/RH6Tg2icMlc7M2DdHEJ9Bl/Themeforest-Modsen-Template-(Community)?node-id=255%3A24521)
+2. [Страница Services](https://www.figma.com/file/RH6Tg2icMlc7M2DdHEJ9Bl/Themeforest-Modsen-Template-(Community)?node-id=255%3A20964). Форма отправки Contact Us должна отправлять письмо на электонную почту выполняющего. При переходе к описанию любого из сервиса должно открываться его полное описание, у которых верстка является общей, но различяется изображениями и тектом, также на странице с полным описанием можно перейти на полное описание другого сервиса.  
+3. [Страница About us](https://www.figma.com/file/RH6Tg2icMlc7M2DdHEJ9Bl/Themeforest-Modsen-Template-(Community)?node-id=255%3A23264). Логика блока с отзывами должна быть аналогична той, что и на главной странице. При нажатии на одну из карточек в блоке Why people chosse должен осуществляться переход к [полному описанию сервиса](https://www.figma.com/file/RH6Tg2icMlc7M2DdHEJ9Bl/Themeforest-Ensome-Modsen-(Community)?node-id=255%3A24521).
+4. [Страница Blog](https://www.figma.com/file/RH6Tg2icMlc7M2DdHEJ9Bl/Themeforest-Modsen-Template-(Community)?node-id=255%3A24519). Данная страница состоит из сетки новостей к каждой из которой привязан тег, при нажатии на который должны показываться только новости связанные с этим тегом. При нажатии на More articles список увеличивается на 9 новостей, если новостей больше нет, то кнопка исчезает. При открытии новости в блоке Popular posts отображаются популярные новости по количеству просмотров. В блоке Related Posts отображается 3 самых популярных новости с тем же тегом что и просматриваемая.
+5. [Страница Contacts](https://www.figma.com/file/RH6Tg2icMlc7M2DdHEJ9Bl/Themeforest-Modsen-Template-(Community)?node-id=255%3A26942). Данная страница хранит в себе форму для связи, которая отправляется на почту (выбранную выполняющим) с заранее заготовленным текстом. Карта является интерактивной, на которой отображаются точки (минимум 3) удаленные друг от друга (точки определяет выполняющий, но они должны быть как минимум в разных странах)
+6. [Страница Our team](https://www.figma.com/file/RH6Tg2icMlc7M2DdHEJ9Bl/Themeforest-Modsen-Template-(Community)?node-id=255%3A27792). Данная страница состоит из двух модулей: список людей из команды и их описание. Минимальное количество членов в команде 9, если их больше то оставшиеся подгружаются с импользованием Infinity scroll по 9 человек. На странице описания члена команды присутсвует форма которая отправляет письмо на почту. Также на данной странице должны присутсвовать кнопки социальных сетей, которые переводят на страницу человека в соц сети (для упрощения можно использовать ссылки на не связанных людей, но главное чтобы для каждого члена ссылки уникальные)
+7. [Страница FAQs](https://www.figma.com/file/RH6Tg2icMlc7M2DdHEJ9Bl/Themeforest-Modsen-Template-(Community)?node-id=255%3A28995). Дання страница содержит в себе расширяемые при нажатии блоки, которые содержат в себе ответ на вопрос. Также присутсвует форма связи, которая отправляет сообщение на выбранную выполняющим почту
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Описание табов: выбор иконок для табов остается на усмотрение выполняющего (также можно использовать иконки представленные на дизайне) и представляют из себя следующее (слева на право): Главный экран с кнопкой добавления товара и поделиться товаром, профиль пользователя, список пользователя
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Используемые технологии
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- ***Node.js*** - программная платформа, основанная на движке V8 (транслирующем JavaScript в машинный код).
+- ***Babel*** - транспайлер, преобразующий код из одного стандарта в другой.
+- ***Metro Bundler*** - сборщик для RN проектов.
+- ***yarn*** - менеджер пакетов.
+- ***TS*** - инструмент строгой типизации
+- ***react-router*** - библиотека для навигации в RN.
+- ***react-router-dom*** - инструмент управления состоянием.
+- ***email-js*** - библиотека позваляющая отправлять электонные письма на почту
+- ***styled-components*** - система стилизации react компонентов.
+- ***cypress*** - e2e тестирование для React приложений.
+- ***yup*** - библиотека для валидации форм
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Полезные ссылки
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[React](https://reactjs.org/docs/getting-started.html)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[React hooks](https://reactjs.org/docs/hooks-intro.html)
+
+[React redux](https://react-redux.js.org/introduction/quick-start)
+
+[react-navigation](https://reactnavigation.org/)
+
+[TS](https://www.typescriptlang.org/)
+
+[yup](https://github.com/jquense/yup)
+
+[React native fast image](https://github.com/DylanVann/react-native-fast-image)
+
+[React Native Image Picker](https://github.com/react-native-image-picker/react-native-image-picker)
+
+[React Native Firebase](https://rnfirebase.io/)
+
+[Styled-components](https://www.styled-components.com/docs)
+
+[Commits convetional](https://www.conventionalcommits.org/en/v1.0.0/#specification)
