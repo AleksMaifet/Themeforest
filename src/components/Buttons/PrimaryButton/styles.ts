@@ -1,10 +1,12 @@
+import {
+  PrimaryButtonWrapperType,
+  StyleOptionsType,
+} from 'src/components/Buttons/PrimaryButton/types';
 import styled from 'styled-components';
 
 import theme from '@/theme';
 
-import { ButtonWrapperType, StyleOptionsType } from './types';
-
-export const ButtonWrapper = styled.button<ButtonWrapperType<StyleOptionsType>>`
+export const ButtonWrapper = styled.button<PrimaryButtonWrapperType<StyleOptionsType>>`
   display: flex;
   justify-content: center;
   align-items: center;

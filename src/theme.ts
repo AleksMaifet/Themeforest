@@ -22,6 +22,7 @@ const colors = {
   Grey: '#9497A1',
   Background: '#F1F6FA',
   Error: '#C14040',
+  White: '#FFFFFF',
 };
 
 /// Shadow-box

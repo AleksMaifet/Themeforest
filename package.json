@@ -5,8 +5,8 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lintfix": "eslint . --fix --ext .js,.jsx,.ts,.tsx"
+    "eslint:test": "eslint src --ext .ts,.tsx",
+    "eslint:fix": "eslint --fix src --ext .ts,.tsx"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",

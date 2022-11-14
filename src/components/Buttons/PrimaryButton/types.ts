@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-export interface IButton<T> {
+export interface IPrimaryButton<T> {
   title: string;
   icon: ReactElement;
   styleOptions?: T;
@@ -11,6 +11,6 @@ export type StyleOptionsType = {
   backGroundColor: string;
 };
 
-export type ButtonWrapperType<T> = {
+export type PrimaryButtonWrapperType<T> = {
   styleOptions?: Partial<T>;
 };

@@ -11,13 +11,13 @@ const enum PAGE {
 
 const enum PATH {
   HOME_PAGE_ROUTE = '/',
-  BLOG_PAGE_ROUTE = '/Blog',
-  SOLUTIONS_PAGE_ROUTE = '/Solutions',
-  CONTACTS_PAGE_ROUTE = '/Contacts',
-  OUR_TEAM_PAGE_ROUTE = '/Our_team',
-  SERVICES_PAGE_ROUTE = '/Services',
-  ABOUT_PAGE_ROUTE = '/About',
-  FAQ_PAGE_ROUTE = '/FAQ',
+  SECOND_PAGE_ROUTE = '/Blog',
+  THIRD_PAGE_ROUTE = '/Solutions',
+  FOURTH_PAGE_ROUTE = '/Contacts',
+  FIFTH_PAGE_ROUTE = '/Our_team',
+  SIXTH_PAGE_ROUTE = '/Services',
+  SEVENTH_PAGE_ROUTE = '/About',
+  EIGHTH_PAGE_ROUTE = '/FAQ',
 }
 
 export const headerLinks = [
@@ -27,30 +27,30 @@ export const headerLinks = [
   },
   {
     name: PAGE.SERVICES,
-    link: PATH.SERVICES_PAGE_ROUTE,
+    link: PATH.SECOND_PAGE_ROUTE,
   },
   {
     name: PAGE.ABOUT,
-    link: PATH.ABOUT_PAGE_ROUTE,
+    link: PATH.THIRD_PAGE_ROUTE,
   },
   {
     name: PAGE.BLOG,
-    link: PATH.BLOG_PAGE_ROUTE,
+    link: PATH.FOURTH_PAGE_ROUTE,
   },
   {
     name: PAGE.CONTACTS,
-    link: PATH.CONTACTS_PAGE_ROUTE,
+    link: PATH.FIFTH_PAGE_ROUTE,
   },
   {
     name: PAGE.SOLUTIONS,
-    link: PATH.SOLUTIONS_PAGE_ROUTE,
+    link: PATH.SIXTH_PAGE_ROUTE,
   },
   {
     name: PAGE.OUR_TEAM,
-    link: PATH.OUR_TEAM_PAGE_ROUTE,
+    link: PATH.SEVENTH_PAGE_ROUTE,
   },
   {
     name: PAGE.FAQ,
-    link: PATH.FAQ_PAGE_ROUTE,
+    link: PATH.EIGHTH_PAGE_ROUTE,
   },
 ];

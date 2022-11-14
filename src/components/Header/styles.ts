@@ -8,7 +8,9 @@ export const HeaderContainer = styled.header`
   ${handleContainerStyles(theme.colors.Background, theme.spaces[8])}
 `;
 
-export const NavigationWrapper = styled.nav``;
+export const ContainerWrapper = styled.div`
+  ${theme.container}
+`;
 
 export const NavLinkWrapper = styled(NavLink)`
   color: ${theme.colors.Grey};
