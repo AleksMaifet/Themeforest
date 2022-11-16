@@ -3,10 +3,6 @@ import styled from 'styled-components';
 import theme from '@/theme';
 
 export const ImageContainer = styled.img<any>`
-  position: absolute;
-  top: 65%;
-  left: 0;
-  right: 0;
   background-image: url(${({ src }) => src});
   background-position: right bottom;
   background-size: cover;

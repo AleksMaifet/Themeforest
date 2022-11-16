@@ -5,7 +5,7 @@ import theme from '@/theme';
 import { handleContainerStyles } from '@/utills/handleContainerStyles';
 
 export const HeaderContainer = styled.header`
-  ${handleContainerStyles(theme.colors.Background, theme.spaces[8])}
+  ${handleContainerStyles(theme.spaces[8], theme.colors.Background)}
 `;
 
 export const ContainerWrapper = styled.div`

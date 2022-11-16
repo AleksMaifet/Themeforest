@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import theme from '@/theme';
+
 export const MainContainer = styled.main`
-  position: relative;
+  background-color: ${theme.colors.Tertiary};
 `;

@@ -1,12 +1,9 @@
 import React, { memo } from 'react';
 
-import { ButtonWrapper } from 'src/components/Buttons/PrimaryButton/styles';
-import {
-  IPrimaryButton,
-  StyleOptionsType,
-} from 'src/components/Buttons/PrimaryButton/types';
-
 import { ReturnComponentType } from '@/commonTypes';
+
+import { ButtonWrapper } from './styles';
+import { IPrimaryButton, StyleOptionsType } from './types';
 
 const PrimaryButton: React.FC<IPrimaryButton<StyleOptionsType>> = ({
   title,

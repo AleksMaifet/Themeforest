@@ -1,10 +1,8 @@
-import {
-  PrimaryButtonWrapperType,
-  StyleOptionsType,
-} from 'src/components/Buttons/PrimaryButton/types';
 import styled from 'styled-components';
 
 import theme from '@/theme';
+
+import { PrimaryButtonWrapperType, StyleOptionsType } from './types';
 
 export const ButtonWrapper = styled.button<PrimaryButtonWrapperType<StyleOptionsType>>`
   display: flex;

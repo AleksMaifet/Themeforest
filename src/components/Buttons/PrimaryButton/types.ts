@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 
 export interface IPrimaryButton<T> {
   title: string;
-  icon: ReactElement;
+  icon?: ReactElement;
   styleOptions?: T;
 }
 

@@ -6,27 +6,25 @@ import {
   ContainerWrapper,
   HomeSectionContainer,
   HomeSectionContainerContext,
-  HomeSectionText,
-  HomeSectionTitle,
 } from './styles';
-import { IHomeSectionOne } from './types';
+import { IHomeSectionTwo } from './types';
 
-const HomeSectionOne: React.FC<IHomeSectionOne> = ({
+const HomeSectionTwo: React.FC<IHomeSectionTwo> = ({
   title,
   text,
-  spacing,
-  flex,
+  image,
   children,
 }): ReturnComponentType => (
-  <HomeSectionContainer spacing={spacing}>
-    <ContainerWrapper flex={flex}>
-      <HomeSectionTitle>{title}</HomeSectionTitle>
+  <HomeSectionContainer>
+    {image}
+    <ContainerWrapper>
+      {title}
       <HomeSectionContainerContext>
-        <HomeSectionText>{text}</HomeSectionText>
+        {text}
         {children}
       </HomeSectionContainerContext>
     </ContainerWrapper>
   </HomeSectionContainer>
 );
 
-export default memo(HomeSectionOne);
+export default memo(HomeSectionTwo);

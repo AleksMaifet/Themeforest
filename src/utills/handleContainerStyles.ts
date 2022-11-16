@@ -1,8 +1,8 @@
 import { handleContainerStylesType } from '@/utills/types';
 
 export const handleContainerStyles = (
-  backgroundColor: string,
   spacing: number,
+  backgroundColor?: string,
 ): handleContainerStylesType => ({
   display: 'flex',
   'justify-content': 'space-around',
