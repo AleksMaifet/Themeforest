@@ -60,6 +60,7 @@ const textSize = {
   lg: 3,
   xl: 4,
   xll: 5,
+  xlll: 6,
 };
 
 export default {

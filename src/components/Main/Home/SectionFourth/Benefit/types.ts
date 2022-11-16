@@ -1,8 +1,7 @@
 import { ReactNode } from 'react';
 
-export interface ISecondSection {
+export interface IBenefit {
   title: ReactNode;
   text: ReactNode;
   children: ReactNode;
-  image: ReactNode;
 }

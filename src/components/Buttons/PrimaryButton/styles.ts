@@ -8,7 +8,8 @@ export const ButtonWrapper = styled.button<PrimaryButtonWrapperType<StyleOptions
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: ${theme.spaces[2]}px ${theme.spaces[3]}px;
+  width: ${theme.spaces[13] * 2}px;
+  padding: ${theme.spaces[2]}px 0;
   background-color: ${({ styleOptions }) =>
     styleOptions?.backGroundColor || theme.colors.Primary};
   font-family: ${theme.fontFamily[0]};

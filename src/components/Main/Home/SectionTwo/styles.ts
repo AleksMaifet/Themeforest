@@ -17,5 +17,4 @@ export const HomeSectionContainerContext = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: ${theme.spaces[8]}%;
 `;

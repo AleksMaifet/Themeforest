@@ -7,9 +7,9 @@ import {
   HomeSectionContainer,
   HomeSectionContainerContext,
 } from './styles';
-import { IHomeSectionTwo } from './types';
+import { ISecondSection } from './types';
 
-const HomeSectionTwo: React.FC<IHomeSectionTwo> = ({
+const SecondSection: React.FC<ISecondSection> = ({
   title,
   text,
   image,
@@ -27,4 +27,4 @@ const HomeSectionTwo: React.FC<IHomeSectionTwo> = ({
   </HomeSectionContainer>
 );
 
-export default memo(HomeSectionTwo);
+export default memo(SecondSection);

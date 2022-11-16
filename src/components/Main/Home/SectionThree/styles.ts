@@ -13,21 +13,8 @@ export const ContainerWrapper = styled.div`
   flex-direction: column;
 `;
 
-export const HomeSectionTitle = styled.h1`
-  display: inline-block;
-  position: relative;
-  font-size: ${theme.textSize.lg}rem;
-`;
-
 export const HomeSectionContainerContext = styled.div`
   display: flex;
   justify-content: space-between;
   padding: ${theme.spaces[9]}px 0;
-`;
-
-export const HomeSectionText = styled.p`
-  font-family: ${theme.fontFamily[1]};
-  font-size: ${theme.textSize.sm}rem;
-  color: ${theme.colors.Grey};
-  width: ${theme.spaces[8]}%;
 `;

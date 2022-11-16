@@ -4,14 +4,14 @@ import { DEFAULT_VALUE_STYLE } from '@/constants';
 import theme from '@/theme';
 import { handleContainerStyles } from '@/utills/handleContainerStyles';
 
-import { IHomeSectionOne } from './types';
+import { IFirstSection } from './types';
 
-export const HomeSectionContainer = styled.section<Pick<IHomeSectionOne, 'spacing'>>`
+export const HomeSectionContainer = styled.section<Pick<IFirstSection, 'spacing'>>`
   position: relative;
   ${({ spacing = theme.spaces[0] }) => handleContainerStyles(spacing)};
 `;
 
-export const ContainerWrapper = styled.div<Pick<IHomeSectionOne, 'flex'>>`
+export const ContainerWrapper = styled.div<Pick<IFirstSection, 'flex'>>`
   ${theme.container};
   justify-content: ${({ flex }) => (flex ? flex.justifyContent : DEFAULT_VALUE_STYLE)};
   align-items: ${({ flex }) => (flex ? flex.alignItems : DEFAULT_VALUE_STYLE)};
@@ -20,20 +20,13 @@ export const ContainerWrapper = styled.div<Pick<IHomeSectionOne, 'flex'>>`
 export const HomeSectionTitle = styled.h1`
   display: inline-block;
   position: relative;
-  width: ${theme.spaces[6] + 1}%;
-  font-size: ${theme.textSize.lg}rem;
+  width: ${theme.spaces[9]}%;
+  font-size: ${theme.textSize.xl + 0.5}rem;
 `;
 
 export const HomeSectionContainerContext = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: ${theme.spaces[8]}%;
-`;
-
-export const HomeSectionText = styled.p`
-  font-family: ${theme.fontFamily[1]};
-  font-size: ${theme.textSize.sm}rem;
-  color: ${theme.colors.Grey};
-  margin-bottom: ${theme.spaces[6]}px;
+  width: ${theme.spaces[9]}%;
 `;

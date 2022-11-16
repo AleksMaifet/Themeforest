@@ -1,0 +1,57 @@
+import React from 'react';
+
+import { ReturnComponentType } from '@/commonTypes';
+import Image from '@/components/Image';
+import TextContainer from '@/components/Text';
+import TitleContainer from '@/components/Title';
+import { HomePageSection } from '@/mocks';
+import theme from '@/theme';
+
+import Benefit from './Benefit';
+import {
+  BenefitsContainer,
+  ContainerWrapper,
+  HomeSectionContainer,
+  HomeSectionContainerContext,
+} from './styles';
+import { IFourthSection } from './types';
+
+const {
+  HomeFourthSection: { benefits },
+} = HomePageSection;
+
+const FourthSection: React.FC<IFourthSection> = ({
+  sectionTitle,
+  sectionText,
+}): ReturnComponentType => (
+  <HomeSectionContainer>
+    <ContainerWrapper>
+      <HomeSectionContainerContext>
+        <div>
+          {sectionTitle}
+          {sectionText}
+        </div>
+        <BenefitsContainer>
+          {benefits.map(({ id, title, text, Img }) => (
+            <Benefit
+              key={id}
+              title={
+                <TitleContainer
+                  title={title}
+                  fontSize={theme.textSize.md}
+                  top={theme.spaces[2]}
+                  bottom={theme.spaces[2]}
+                />
+              }
+              text={<TextContainer text={text} />}
+            >
+              <Image context={<Img />} />
+            </Benefit>
+          ))}
+        </BenefitsContainer>
+      </HomeSectionContainerContext>
+    </ContainerWrapper>
+  </HomeSectionContainer>
+);
+
+export default FourthSection;

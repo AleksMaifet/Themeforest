@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
-export interface IHomeSectionOne {
+export interface IFirstSection {
   title: ReactNode;
-  text: string;
+  text: ReactNode;
   spacing?: number;
   flex?: {
     justifyContent?: string;

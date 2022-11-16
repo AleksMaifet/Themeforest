@@ -6,10 +6,10 @@ import { ROUND_BUTTON_TITLE } from '@/constants';
 
 import { ButtonWrapper } from './styles';
 
-const ButtonFirstSection = (): ReturnComponentType => (
+const FirstButtonSection = (): ReturnComponentType => (
   <ButtonWrapper>
     <SecondaryButton title={ROUND_BUTTON_TITLE} />
   </ButtonWrapper>
 );
 
-export default ButtonFirstSection;
+export default FirstButtonSection;

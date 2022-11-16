@@ -10,8 +10,9 @@ const TextContainer: React.FC<ITextContainer> = ({
   fontSize,
   top,
   bottom,
+  width,
 }): ReturnComponentType => (
-  <TextWrapper top={top} bottom={bottom} fontSize={fontSize}>
+  <TextWrapper width={width} top={top} bottom={bottom} fontSize={fontSize}>
     {text}
   </TextWrapper>
 );

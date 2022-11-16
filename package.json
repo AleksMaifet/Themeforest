@@ -1,12 +1,16 @@
 {
   "name": "themeforest",
+  "homepage": "https://AleksMaifet.github.io/Themeforest",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "craco start",
     "build": "craco build",
     "eslint:test": "eslint src --ext .ts,.tsx",
-    "eslint:fix": "eslint --fix src --ext .ts,.tsx"
+    "eslint:fix": "eslint --fix src --ext .ts,.tsx",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -38,6 +42,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^4.0.0",
     "prettier": "^2.7.1",
     "react-countup": "^6.3.2",
     "react-router-dom": "^6.4.3",

@@ -3,4 +3,5 @@ export interface ITextContainer {
   fontSize?: number;
   top?: number;
   bottom?: number;
+  width?: number;
 }

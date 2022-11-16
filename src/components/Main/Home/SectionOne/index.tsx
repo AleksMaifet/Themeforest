@@ -6,12 +6,11 @@ import {
   ContainerWrapper,
   HomeSectionContainer,
   HomeSectionContainerContext,
-  HomeSectionText,
   HomeSectionTitle,
 } from './styles';
-import { IHomeSectionOne } from './types';
+import { IFirstSection } from './types';
 
-const HomeSectionOne: React.FC<IHomeSectionOne> = ({
+const FirstSection: React.FC<IFirstSection> = ({
   title,
   text,
   spacing,
@@ -22,11 +21,11 @@ const HomeSectionOne: React.FC<IHomeSectionOne> = ({
     <ContainerWrapper flex={flex}>
       <HomeSectionTitle>{title}</HomeSectionTitle>
       <HomeSectionContainerContext>
-        <HomeSectionText>{text}</HomeSectionText>
+        {text}
         {children}
       </HomeSectionContainerContext>
     </ContainerWrapper>
   </HomeSectionContainer>
 );
 
-export default memo(HomeSectionOne);
+export default memo(FirstSection);

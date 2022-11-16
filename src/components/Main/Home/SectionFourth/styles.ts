@@ -12,21 +12,18 @@ export const ContainerWrapper = styled.div`
   flex-direction: column;
 `;
 
-export const HomeSectionTitle = styled.h1`
-  display: inline-block;
-  position: relative;
-  font-size: ${theme.textSize.lg}rem;
-`;
-
 export const HomeSectionContainerContext = styled.div`
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  align-items: center;
 `;
 
-export const HomeSectionText = styled.p`
-  font-family: ${theme.fontFamily[1]};
-  font-size: ${theme.textSize.sm}rem;
-  color: ${theme.colors.Grey};
-  width: ${theme.spaces[8]}%;
+export const BenefitsContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: ${theme.spaces[6]}px;
+
+  > :nth-child(2n + 1) {
+    position: relative;
+    top: -${theme.spaces[3]}%;
+  }
 `;

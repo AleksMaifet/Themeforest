@@ -1,9 +1,8 @@
 import React, { memo, useRef } from 'react';
 
 import { ReturnComponentType } from '@/commonTypes';
-import Image from '@/components/Image';
 import CountUpContainer from '@/components/Main/Home/SectionThree/CountUp';
-import { DURATION_VALUE_COUNT, PNG } from '@/constants';
+import { DURATION_VALUE_COUNT } from '@/constants';
 import { useIsInViewport } from '@/hooks';
 import { HomePageSection } from '@/mocks';
 
@@ -11,18 +10,18 @@ import {
   ContainerWrapper,
   HomeSectionContainer,
   HomeSectionContainerContext,
-  HomeSectionText,
-  HomeSectionTitle,
 } from './styles';
-import { ISectionThree } from './types';
-
-const { ClientsImageSection } = PNG;
+import { IThirdSection } from './types';
 
 const {
-  HomeFourthSection: { resultProvideServices },
+  HomeThirdSection: { resultProvideServices },
 } = HomePageSection;
 
-const SectionThree: React.FC<ISectionThree> = ({ title, text }): ReturnComponentType => {
+const ThirdSection: React.FC<IThirdSection> = ({
+  title,
+  text,
+  children,
+}): ReturnComponentType => {
   const ref = useRef<HTMLDivElement>(null);
 
   const isView = useIsInViewport(ref);
@@ -30,7 +29,7 @@ const SectionThree: React.FC<ISectionThree> = ({ title, text }): ReturnComponent
   return (
     <HomeSectionContainer>
       <ContainerWrapper>
-        <HomeSectionTitle>{title}</HomeSectionTitle>
+        {title}
         <HomeSectionContainerContext ref={ref}>
           {resultProvideServices.map(({ id, titleProvide, amount, suffix }) => (
             <CountUpContainer
@@ -42,12 +41,12 @@ const SectionThree: React.FC<ISectionThree> = ({ title, text }): ReturnComponent
               suffix={suffix}
             />
           ))}
-          <HomeSectionText>{text}</HomeSectionText>
+          {text}
         </HomeSectionContainerContext>
-        <Image context={ClientsImageSection} />
+        {children}
       </ContainerWrapper>
     </HomeSectionContainer>
   );
 };
 
-export default memo(SectionThree);
+export default memo(ThirdSection);
