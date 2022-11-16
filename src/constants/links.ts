@@ -11,13 +11,13 @@ const enum PAGE {
 
 const enum PATH {
   HOME_PAGE_ROUTE = '/',
-  SECOND_PAGE_ROUTE = '/Blog',
-  THIRD_PAGE_ROUTE = '/Solutions',
-  FOURTH_PAGE_ROUTE = '/Contacts',
-  FIFTH_PAGE_ROUTE = '/Our_team',
-  SIXTH_PAGE_ROUTE = '/Services',
-  SEVENTH_PAGE_ROUTE = '/About',
-  EIGHTH_PAGE_ROUTE = '/FAQ',
+  SECOND_PAGE_ROUTE = '/services',
+  THIRD_PAGE_ROUTE = '/about',
+  FOURTH_PAGE_ROUTE = '/blog',
+  FIFTH_PAGE_ROUTE = '/contacts',
+  SIXTH_PAGE_ROUTE = '/solutions',
+  SEVENTH_PAGE_ROUTE = '/our_team',
+  EIGHTH_PAGE_ROUTE = '/faq',
 }
 
 export const headerLinks = [
