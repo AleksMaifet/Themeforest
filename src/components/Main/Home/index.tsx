@@ -1,16 +1,19 @@
 import React from 'react';
 
+import { SwiperSlide } from 'swiper/react';
+
 import { ReturnComponentType } from '@/commonTypes';
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
 import Image from '@/components/Image';
-import FifthSection from '@/components/Main/Home/SectionFive';
 import FourthSection from '@/components/Main/Home/SectionFour';
 import FirstSection from '@/components/Main/Home/SectionOne';
 import SectionThree from '@/components/Main/Home/SectionThree';
 import SecondSection from '@/components/Main/Home/SectionTwo';
+import SwiperSection from '@/components/Main/Home/SwiperSection';
+import Testimonial from '@/components/Main/Home/SwiperSection/Testimonial';
 import TextContainer from '@/components/Text';
 import TitleContainer from '@/components/Title';
-import { ANALYTICS_BUTTON_TITLE, NEW_SOLUTION_BUTTON_TITLE, PNG } from '@/constants';
+import { ANALYTICS_BUTTON_TITLE, NEW_SOLUTION_BUTTON_TITLE, PNG, SVG } from '@/constants';
 import { HomePageSection } from '@/mocks';
 import theme from '@/theme';
 
@@ -27,6 +30,8 @@ const {
   HomeFifthSection,
 } = HomePageSection;
 const { FirstImageHomeSection, SecondImageHomeSection, ClientsImageSection } = PNG;
+
+const { ArrowLeft, ArrowRight } = SVG;
 
 const sectionStyle = [
   { alignItems: 'flex-start' },
@@ -93,11 +98,20 @@ const HomePageMain = (): ReturnComponentType => (
       }
       sectionText={<TextContainer text={HomeFourthSection.text} top={theme.spaces[6]} />}
     />
-    <FifthSection
+    <SwiperSection
+      autoPlay
       title={
         <TitleContainer title={HomeFifthSection.title} fontSize={theme.textSize.xl} />
       }
-    />
+      prevController={<ArrowLeft />}
+      nextController={<ArrowRight />}
+    >
+      {HomeFifthSection.clients.map(el => (
+        <SwiperSlide key={el.id}>
+          <Testimonial value={el} />
+        </SwiperSlide>
+      ))}
+    </SwiperSection>
   </MainContainer>
 );
 

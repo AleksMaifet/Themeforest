@@ -1,31 +1,22 @@
 import React, { memo, SyntheticEvent, useCallback, useRef, useState } from 'react';
 
 import SwiperClass, { Autoplay } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 import 'swiper/css';
 
 import { ReturnComponentType } from '@/commonTypes';
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
-import Testimonial from '@/components/Main/Home/SectionFive/Testimonial';
 import SwiperController from '@/components/SwiperController';
 import {
   ARROW_SWIPER_NEXT,
   ENDING_SWIPER_VALUE,
   STARTING_SWIPER_VALUE,
-  SVG,
   SVG_ATTRIBUTES,
 } from '@/constants';
-import { HomePageSection } from '@/mocks';
 import theme from '@/theme';
 
 import { Container, ContainerContext, ContainerTitle, ContainerWrapper } from './styles';
 import { IFifthSection } from './types';
-
-const { ArrowLeft, ArrowRight } = SVG;
-
-const {
-  HomeFifthSection: { clients },
-} = HomePageSection;
 
 const arrowStyle = {
   width: theme.spaces[9],
@@ -33,7 +24,13 @@ const arrowStyle = {
   backGroundColor: theme.colors.Background,
 };
 
-const FifthSection: React.FC<IFifthSection> = ({ title }): ReturnComponentType => {
+const SwiperSection: React.FC<IFifthSection> = ({
+  title,
+  children,
+  autoPlay,
+  prevController,
+  nextController,
+}): ReturnComponentType => {
   const swiperRef = useRef<SwiperClass>();
 
   const [disablePrevSlide, setDisablePrevSlide] = useState<boolean>(true);
@@ -71,7 +68,7 @@ const FifthSection: React.FC<IFifthSection> = ({ title }): ReturnComponentType =
             leftIcon={
               <PrimaryButton
                 styleOptions={arrowStyle}
-                icon={<ArrowLeft />}
+                icon={prevController}
                 isDisabled={disablePrevSlide}
                 callback={handleSwiperController}
               />
@@ -79,7 +76,7 @@ const FifthSection: React.FC<IFifthSection> = ({ title }): ReturnComponentType =
             rightIcon={
               <PrimaryButton
                 styleOptions={arrowStyle}
-                icon={<ArrowRight />}
+                icon={nextController}
                 isDisabled={disableNextSlide}
                 callback={handleSwiperController}
               />
@@ -92,20 +89,18 @@ const FifthSection: React.FC<IFifthSection> = ({ title }): ReturnComponentType =
               swiperRef.current = swiper;
             }}
             onProgress={(_, progress) => handleDisableController(progress)}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
+            autoplay={
+              autoPlay && {
+                delay: 2500,
+                disableOnInteraction: false,
+              }
+            }
             slidesPerView={3}
             spaceBetween={100}
             modules={[Autoplay]}
             className="mySwiper"
           >
-            {clients.map(el => (
-              <SwiperSlide key={el.id}>
-                <Testimonial value={el} />
-              </SwiperSlide>
-            ))}
+            {children}
           </Swiper>
         </ContainerContext>
       </ContainerWrapper>
@@ -113,4 +108,4 @@ const FifthSection: React.FC<IFifthSection> = ({ title }): ReturnComponentType =
   );
 };
 
-export default memo(FifthSection);
+export default memo(SwiperSection);
