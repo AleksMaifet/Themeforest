@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/Themeforest/static/css/main.1705e7d3.css",
-    "main.js": "/Themeforest/static/js/main.21cbcbaf.js",
+    "main.js": "/Themeforest/static/js/main.625f6d6e.js",
+    "static/media/videoBg.mp4": "/Themeforest/static/media/videoBg.56441fcbb87daf6a532a.mp4",
     "static/media/home1.png": "/Themeforest/static/media/home1.86903707f79ebe2bd67e.png",
     "static/media/home2.png": "/Themeforest/static/media/home2.04cea973a6c582426f78.png",
     "static/media/clients.png": "/Themeforest/static/media/clients.54ec2b4536b73a2e1ea0.png",
@@ -18,10 +19,10 @@
     "static/media/data_analytics.svg": "/Themeforest/static/media/data_analytics.0812581fe5e326332964b259121df77a.svg",
     "index.html": "/Themeforest/index.html",
     "main.1705e7d3.css.map": "/Themeforest/static/css/main.1705e7d3.css.map",
-    "main.21cbcbaf.js.map": "/Themeforest/static/js/main.21cbcbaf.js.map"
+    "main.625f6d6e.js.map": "/Themeforest/static/js/main.625f6d6e.js.map"
   },
   "entrypoints": [
     "static/css/main.1705e7d3.css",
-    "static/js/main.21cbcbaf.js"
+    "static/js/main.625f6d6e.js"
   ]
 }
