@@ -3,7 +3,8 @@ import React from 'react';
 import { ReturnComponentType } from '@/commonTypes';
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
 import Image from '@/components/Image';
-import FourthSection from '@/components/Main/Home/SectionFourth';
+import FifthSection from '@/components/Main/Home/SectionFive';
+import FourthSection from '@/components/Main/Home/SectionFour';
 import FirstSection from '@/components/Main/Home/SectionOne';
 import SectionThree from '@/components/Main/Home/SectionThree';
 import SecondSection from '@/components/Main/Home/SectionTwo';
@@ -18,8 +19,13 @@ import FirstSelectionWordText from './SectionOne/FirstSelectionWordText';
 import SecondSelectionWordText from './SectionOne/SecondSelectionWordText';
 import { MainContainer } from './styles';
 
-const { HomeFirstSection, HomeSecondSection, HomeThirdSection, HomeFourthSection } =
-  HomePageSection;
+const {
+  HomeFirstSection,
+  HomeSecondSection,
+  HomeThirdSection,
+  HomeFourthSection,
+  HomeFifthSection,
+} = HomePageSection;
 const { FirstImageHomeSection, SecondImageHomeSection, ClientsImageSection } = PNG;
 
 const sectionStyle = [
@@ -48,11 +54,7 @@ const HomePageMain = (): ReturnComponentType => (
     </FirstSection>
     <SecondSection
       title={
-        <TitleContainer
-          title={HomeSecondSection.title}
-          fontSize={theme.textSize.xl}
-          width={theme.spaces[8]}
-        />
+        <TitleContainer title={HomeSecondSection.title} fontSize={theme.textSize.xl} />
       }
       text={
         <TextContainer
@@ -71,7 +73,6 @@ const HomePageMain = (): ReturnComponentType => (
       title={
         <TitleContainer
           title={HomeThirdSection.title}
-          width={theme.spaces[14]}
           fontSize={theme.textSize.xl}
           center
         />
@@ -91,6 +92,11 @@ const HomePageMain = (): ReturnComponentType => (
         <TitleContainer title={HomeFourthSection.title} fontSize={theme.textSize.xl} />
       }
       sectionText={<TextContainer text={HomeFourthSection.text} top={theme.spaces[6]} />}
+    />
+    <FifthSection
+      title={
+        <TitleContainer title={HomeFifthSection.title} fontSize={theme.textSize.xl} />
+      }
     />
   </MainContainer>
 );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import { ReturnComponentType } from '@/commonTypes';
 import Image from '@/components/Image';
@@ -10,9 +10,10 @@ import theme from '@/theme';
 import Benefit from './Benefit';
 import {
   BenefitsContainer,
+  Container,
+  ContainerContext,
   ContainerWrapper,
-  HomeSectionContainer,
-  HomeSectionContainerContext,
+  Line,
 } from './styles';
 import { IFourthSection } from './types';
 
@@ -24,13 +25,13 @@ const FourthSection: React.FC<IFourthSection> = ({
   sectionTitle,
   sectionText,
 }): ReturnComponentType => (
-  <HomeSectionContainer>
+  <Container>
     <ContainerWrapper>
-      <HomeSectionContainerContext>
-        <div>
+      <ContainerContext>
+        <Line>
           {sectionTitle}
           {sectionText}
-        </div>
+        </Line>
         <BenefitsContainer>
           {benefits.map(({ id, title, text, Img }) => (
             <Benefit
@@ -49,9 +50,9 @@ const FourthSection: React.FC<IFourthSection> = ({
             </Benefit>
           ))}
         </BenefitsContainer>
-      </HomeSectionContainerContext>
+      </ContainerContext>
     </ContainerWrapper>
-  </HomeSectionContainer>
+  </Container>
 );
 
-export default FourthSection;
+export default memo(FourthSection);

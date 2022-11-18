@@ -5,7 +5,7 @@ export const handleContainerStyles = (
   backgroundColor?: string,
 ): handleContainerStylesType => ({
   display: 'flex',
-  'justify-content': 'space-around',
+  'justify-content': 'center',
   'align-items': 'center',
   'background-color': `${backgroundColor}`,
   padding: `${spacing}px 0`,

@@ -1,4 +1,5 @@
 import React from 'react';
+import 'antd/dist/antd.less';
 
 import { ReturnComponentType } from '@/commonTypes';
 import Header from '@/components/Header';

@@ -2,12 +2,7 @@ import React, { memo } from 'react';
 
 import { ReturnComponentType } from '@/commonTypes';
 
-import {
-  ContainerWrapper,
-  HomeSectionContainer,
-  HomeSectionContainerContext,
-  HomeSectionTitle,
-} from './styles';
+import { Container, ContainerContext, ContainerTitle, ContainerWrapper } from './styles';
 import { IFirstSection } from './types';
 
 const FirstSection: React.FC<IFirstSection> = ({
@@ -17,15 +12,15 @@ const FirstSection: React.FC<IFirstSection> = ({
   flex,
   children,
 }): ReturnComponentType => (
-  <HomeSectionContainer spacing={spacing}>
+  <Container spacing={spacing}>
     <ContainerWrapper flex={flex}>
-      <HomeSectionTitle>{title}</HomeSectionTitle>
-      <HomeSectionContainerContext>
+      <ContainerTitle>{title}</ContainerTitle>
+      <ContainerContext>
         {text}
         {children}
-      </HomeSectionContainerContext>
+      </ContainerContext>
     </ContainerWrapper>
-  </HomeSectionContainer>
+  </Container>
 );
 
 export default memo(FirstSection);

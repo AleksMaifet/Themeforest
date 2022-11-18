@@ -6,11 +6,7 @@ import { DURATION_VALUE_COUNT } from '@/constants';
 import { useIsInViewport } from '@/hooks';
 import { HomePageSection } from '@/mocks';
 
-import {
-  ContainerWrapper,
-  HomeSectionContainer,
-  HomeSectionContainerContext,
-} from './styles';
+import { Container, ContainerContext, ContainerWrapper } from './styles';
 import { IThirdSection } from './types';
 
 const {
@@ -27,10 +23,10 @@ const ThirdSection: React.FC<IThirdSection> = ({
   const isView = useIsInViewport(ref);
 
   return (
-    <HomeSectionContainer>
+    <Container>
       <ContainerWrapper>
         {title}
-        <HomeSectionContainerContext ref={ref}>
+        <ContainerContext ref={ref}>
           {resultProvideServices.map(({ id, titleProvide, amount, suffix }) => (
             <CountUpContainer
               key={id}
@@ -42,10 +38,10 @@ const ThirdSection: React.FC<IThirdSection> = ({
             />
           ))}
           {text}
-        </HomeSectionContainerContext>
+        </ContainerContext>
         {children}
       </ContainerWrapper>
-    </HomeSectionContainer>
+    </Container>
   );
 };
 

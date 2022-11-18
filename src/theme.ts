@@ -35,7 +35,8 @@ const boxShadows = [
 
 /// Size
 const size = {
-  xs: 550,
+  xs: 350,
+  sm: 550,
   md: 768,
   xl: 1110,
 };

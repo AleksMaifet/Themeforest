@@ -1,6 +1,7 @@
-import { EMPTY_SUFFIX_COUNT, SVG } from '@/constants';
+import { EMPTY_SUFFIX_COUNT, PNG, SVG } from '@/constants';
 
 const { Machine, Data, Embed, Access } = SVG;
+const { FirstTestimonialPerson, SecondTestimonialPerson, ThirdTestimonialPerson } = PNG;
 
 const HomePageSection = {
   HomeFirstSection: {
@@ -63,6 +64,59 @@ const HomePageSection = {
         Img: Data,
         title: 'Data analytics',
         text: 'At vero eos et accusamus et iusto odio dignissimos duciu quili blandit praesentium voluptatum ipsa quae ab illo.',
+      },
+    ],
+  },
+  HomeFifthSection: {
+    title: 'Testimonials',
+    clients: [
+      {
+        id: '1',
+        name: 'Alex Bern',
+        position: 'CEO by PixelPerfect',
+        comment:
+          '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
+        image: FirstTestimonialPerson,
+      },
+      {
+        id: '2',
+        name: 'Ruben Chifundo',
+        position: 'CEO by NOX',
+        comment:
+          '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
+        image: SecondTestimonialPerson,
+      },
+      {
+        id: '3',
+        name: 'Tigran Nazaret',
+        position: 'Data analyst',
+        comment:
+          '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
+        image: ThirdTestimonialPerson,
+      },
+      {
+        id: '4',
+        name: 'Alex Bern',
+        position: 'CEO by PixelPerfect',
+        comment:
+          '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
+        image: FirstTestimonialPerson,
+      },
+      {
+        id: '5',
+        name: 'Ruben Chifundo',
+        position: 'CEO by NOX',
+        comment:
+          '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
+        image: SecondTestimonialPerson,
+      },
+      {
+        id: '6',
+        name: 'Tigran Nazaret',
+        position: 'Data analyst',
+        comment:
+          '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
+        image: ThirdTestimonialPerson,
       },
     ],
   },

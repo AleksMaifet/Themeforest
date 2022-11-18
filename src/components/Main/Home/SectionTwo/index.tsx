@@ -2,11 +2,7 @@ import React, { memo } from 'react';
 
 import { ReturnComponentType } from '@/commonTypes';
 
-import {
-  ContainerWrapper,
-  HomeSectionContainer,
-  HomeSectionContainerContext,
-} from './styles';
+import { Container, ContainerContext, ContainerWrapper } from './styles';
 import { ISecondSection } from './types';
 
 const SecondSection: React.FC<ISecondSection> = ({
@@ -15,16 +11,16 @@ const SecondSection: React.FC<ISecondSection> = ({
   image,
   children,
 }): ReturnComponentType => (
-  <HomeSectionContainer>
+  <Container>
     {image}
     <ContainerWrapper>
       {title}
-      <HomeSectionContainerContext>
+      <ContainerContext>
         {text}
         {children}
-      </HomeSectionContainerContext>
+      </ContainerContext>
     </ContainerWrapper>
-  </HomeSectionContainer>
+  </Container>
 );
 
 export default memo(SecondSection);

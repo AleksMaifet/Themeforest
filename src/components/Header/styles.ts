@@ -12,6 +12,8 @@ export const ContainerWrapper = styled.div`
   ${theme.container}
 `;
 
+export const NavLine = styled.nav``;
+
 export const NavLinkWrapper = styled(NavLink)`
   color: ${theme.colors.Grey};
   font-size: ${theme.textSize.sm}rem;

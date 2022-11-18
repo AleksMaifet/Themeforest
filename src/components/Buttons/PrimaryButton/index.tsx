@@ -5,15 +5,21 @@ import { ReturnComponentType } from '@/commonTypes';
 import { ButtonWrapper } from './styles';
 import { IPrimaryButton, StyleOptionsType } from './types';
 
-const PrimaryButton: React.FC<IPrimaryButton<StyleOptionsType>> = ({
+const PrimaryButton: React.FC<IPrimaryButton<Partial<StyleOptionsType>>> = ({
   title,
   icon,
   styleOptions,
+  isDisabled,
+  callback,
 }): ReturnComponentType => (
-  <ButtonWrapper styleOptions={styleOptions}>
+  <ButtonWrapper
+    onClick={callback}
+    styleOptions={styleOptions}
+    flex={title}
+    disabled={isDisabled}
+  >
     {icon || null}
-    <span>{title}</span>
+    {title ? <span>{title}</span> : null}
   </ButtonWrapper>
 );
-
 export default memo(PrimaryButton);

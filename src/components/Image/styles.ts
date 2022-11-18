@@ -8,5 +8,4 @@ export const ImageContainer = styled.img<any>`
   background-size: cover;
   background-repeat: no-repeat;
   max-width: ${theme.spaces[14]}%;
-  margin: 0 auto;
 `;
