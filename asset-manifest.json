@@ -1,10 +1,13 @@
 {
   "files": {
     "main.css": "/Themeforest/static/css/main.1705e7d3.css",
-    "main.js": "/Themeforest/static/js/main.625f6d6e.js",
+    "main.js": "/Themeforest/static/js/main.fba16db3.js",
     "static/media/videoBg.mp4": "/Themeforest/static/media/videoBg.56441fcbb87daf6a532a.mp4",
     "static/media/home1.png": "/Themeforest/static/media/home1.86903707f79ebe2bd67e.png",
     "static/media/home2.png": "/Themeforest/static/media/home2.04cea973a6c582426f78.png",
+    "static/media/blog1.png": "/Themeforest/static/media/blog1.db5bfb1af02dd5382932.png",
+    "static/media/blog2.png": "/Themeforest/static/media/blog2.a02d8567ced887614e26.png",
+    "static/media/blog3.png": "/Themeforest/static/media/blog3.3d85537fcdb941d11e33.png",
     "static/media/clients.png": "/Themeforest/static/media/clients.54ec2b4536b73a2e1ea0.png",
     "static/media/person3.png": "/Themeforest/static/media/person3.03461481d1410109a6f7.png",
     "static/media/person2.png": "/Themeforest/static/media/person2.ce0a914f65e4d7b7f34c.png",
@@ -19,10 +22,10 @@
     "static/media/data_analytics.svg": "/Themeforest/static/media/data_analytics.0812581fe5e326332964b259121df77a.svg",
     "index.html": "/Themeforest/index.html",
     "main.1705e7d3.css.map": "/Themeforest/static/css/main.1705e7d3.css.map",
-    "main.625f6d6e.js.map": "/Themeforest/static/js/main.625f6d6e.js.map"
+    "main.fba16db3.js.map": "/Themeforest/static/js/main.fba16db3.js.map"
   },
   "entrypoints": [
     "static/css/main.1705e7d3.css",
-    "static/js/main.625f6d6e.js"
+    "static/js/main.fba16db3.js"
   ]
 }
