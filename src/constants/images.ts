@@ -1,4 +1,7 @@
 import { ReactComponent as Access } from '@/assets/access.svg';
+import FirstImageBlogSection from '@/assets/blogs/blog1.png';
+import SecondImageBlogSection from '@/assets/blogs/blog2.png';
+import ThirdImageBlogSection from '@/assets/blogs/blog3.png';
 import ClientsImageSection from '@/assets/clients.png';
 import { ReactComponent as Data } from '@/assets/data_analytics.svg';
 import { ReactComponent as Embed } from '@/assets/embed_analytics.svg';
@@ -12,6 +15,7 @@ import { ReactComponent as ArrowRight } from '@/assets/swiper_persons/arrows/ico
 import FirstTestimonialPerson from '@/assets/swiper_persons/person1.png';
 import SecondTestimonialPerson from '@/assets/swiper_persons/person2.png';
 import ThirdTestimonialPerson from '@/assets/swiper_persons/person3.png';
+import VideoBg from '@/assets/videoBg.mp4';
 
 export const SVG = {
   IconPlay,
@@ -24,6 +28,10 @@ export const SVG = {
   ArrowRight,
 };
 
+export const Video = {
+  VideoBg,
+};
+
 export const PNG = {
   FirstImageHomeSection,
   SecondImageHomeSection,
@@ -31,4 +39,7 @@ export const PNG = {
   FirstTestimonialPerson,
   SecondTestimonialPerson,
   ThirdTestimonialPerson,
+  FirstImageBlogSection,
+  SecondImageBlogSection,
+  ThirdImageBlogSection,
 };

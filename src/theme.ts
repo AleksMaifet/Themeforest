@@ -1,3 +1,5 @@
+import { keyframes } from 'styled-components';
+
 const fontFamily = ['Manrope', 'Open Sans', 'sans-serif'];
 const fontSizeBase = '10px';
 
@@ -8,6 +10,18 @@ const container = {
   width: '100%',
   'max-width': '1100px',
   padding: '0 15px',
+};
+
+const animation = {
+  spawnAnimation: keyframes`
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }`,
 };
 
 /// Colors
@@ -74,4 +88,5 @@ export default {
   colors,
   boxShadows,
   container,
+  animation,
 };

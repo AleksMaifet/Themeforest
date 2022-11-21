@@ -1,19 +1,28 @@
 {
   "files": {
-    "main.js": "/Themeforest/static/js/main.dfad36d3.js",
+    "main.css": "/Themeforest/static/css/main.1705e7d3.css",
+    "main.js": "/Themeforest/static/js/main.625f6d6e.js",
+    "static/media/videoBg.mp4": "/Themeforest/static/media/videoBg.56441fcbb87daf6a532a.mp4",
     "static/media/home1.png": "/Themeforest/static/media/home1.86903707f79ebe2bd67e.png",
     "static/media/home2.png": "/Themeforest/static/media/home2.04cea973a6c582426f78.png",
     "static/media/clients.png": "/Themeforest/static/media/clients.54ec2b4536b73a2e1ea0.png",
+    "static/media/person3.png": "/Themeforest/static/media/person3.03461481d1410109a6f7.png",
+    "static/media/person2.png": "/Themeforest/static/media/person2.ce0a914f65e4d7b7f34c.png",
+    "static/media/person1.png": "/Themeforest/static/media/person1.dd9821f7efb9b0c747a7.png",
     "static/media/machine.svg": "/Themeforest/static/media/machine.7dc2d6be7243df2779f1a394bf71841a.svg",
     "static/media/logo.svg": "/Themeforest/static/media/logo.cd8cf3528b35cdd930fef42edbece259.svg",
     "static/media/embed_analytics.svg": "/Themeforest/static/media/embed_analytics.4a96eba3d4914cd1f38cb4a9b0e71b2c.svg",
     "static/media/icon_play.svg": "/Themeforest/static/media/icon_play.14a523483b41f52d16bae58985030aca.svg",
     "static/media/access.svg": "/Themeforest/static/media/access.d217ddf7aef8872d013d4535d395963e.svg",
+    "static/media/icon_arrow_right.svg": "/Themeforest/static/media/icon_arrow_right.1cba2c5a510690ff4d41b39e9e5c8d15.svg",
+    "static/media/icon_arrow_left.svg": "/Themeforest/static/media/icon_arrow_left.67190dcfc08b492bfefd95454ea6f2f0.svg",
     "static/media/data_analytics.svg": "/Themeforest/static/media/data_analytics.0812581fe5e326332964b259121df77a.svg",
     "index.html": "/Themeforest/index.html",
-    "main.dfad36d3.js.map": "/Themeforest/static/js/main.dfad36d3.js.map"
+    "main.1705e7d3.css.map": "/Themeforest/static/css/main.1705e7d3.css.map",
+    "main.625f6d6e.js.map": "/Themeforest/static/js/main.625f6d6e.js.map"
   },
   "entrypoints": [
-    "static/js/main.dfad36d3.js"
+    "static/css/main.1705e7d3.css",
+    "static/js/main.625f6d6e.js"
   ]
 }

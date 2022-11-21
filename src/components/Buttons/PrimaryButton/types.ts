@@ -6,6 +6,8 @@ export interface IPrimaryButton<T> {
   styleOptions?: T;
   isDisabled?: boolean;
   callback?: (e: MouseEvent<HTMLButtonElement>) => void;
+  boxShadow?: boolean;
+  reverse?: boolean;
 }
 
 export type StyleOptionsType = {
@@ -13,10 +15,12 @@ export type StyleOptionsType = {
   color: string;
   backGroundColor: string;
   padding: number;
-  boxShadow: boolean;
+  margin: number;
 };
 
 export type PrimaryButtonWrapperType<T> = {
   styleOptions?: Partial<T>;
   flex?: string;
+  boxShadow?: boolean;
+  reverse?: boolean;
 };

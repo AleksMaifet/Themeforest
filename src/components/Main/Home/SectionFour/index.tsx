@@ -44,7 +44,7 @@ const FourthSection: React.FC<IFourthSection> = ({
                   bottom={theme.spaces[2]}
                 />
               }
-              text={<TextContainer text={text} />}
+              text={<TextContainer text={text} maxLines={4} />}
             >
               <Image context={<Img />} />
             </Benefit>

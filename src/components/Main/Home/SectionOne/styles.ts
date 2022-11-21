@@ -7,7 +7,6 @@ import { handleContainerStyles } from '@/utills/handleContainerStyles';
 import { IFirstSection } from './types';
 
 export const Container = styled.section<Pick<IFirstSection, 'spacing'>>`
-  position: relative;
   ${({ spacing = theme.spaces[0] }) => handleContainerStyles(spacing)};
 `;
 
@@ -19,14 +18,15 @@ export const ContainerWrapper = styled.div<Pick<IFirstSection, 'flex'>>`
 
 export const ContainerTitle = styled.h1`
   display: inline-block;
-  position: relative;
-  width: ${theme.spaces[9]}%;
+  width: ${theme.spaces[8]}%;
   font-size: ${theme.textSize.xl + 0.5}rem;
+  font-weight: bold;
 `;
 
 export const ContainerContext = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: ${theme.spaces[9]}%;
+  position: relative;
+  width: ${theme.spaces[7]}%;
 `;

@@ -18,3 +18,7 @@ export const ContainerContext = styled.div`
   justify-content: space-between;
   padding: ${theme.spaces[9]}px 0;
 `;
+
+export const Line = styled.div`
+  animation: 3s linear 1s infinite alternate slidein;
+`;

@@ -1,7 +1,14 @@
 import { EMPTY_SUFFIX_COUNT, PNG, SVG } from '@/constants';
 
-const { Machine, Data, Embed, Access } = SVG;
-const { FirstTestimonialPerson, SecondTestimonialPerson, ThirdTestimonialPerson } = PNG;
+const { Machine, Data, Embed, Access, ArrowRight } = SVG;
+const {
+  FirstTestimonialPerson,
+  SecondTestimonialPerson,
+  ThirdTestimonialPerson,
+  FirstImageBlogSection,
+  SecondImageBlogSection,
+  ThirdImageBlogSection,
+} = PNG;
 
 const HomePageSection = {
   HomeFirstSection: {
@@ -117,6 +124,115 @@ const HomePageSection = {
         comment:
           '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corpor suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis utem vel eum iure reprehender qui in ea voluptate velit esse quam nihil molesti consequatur, vel illum.” ',
         image: ThirdTestimonialPerson,
+      },
+    ],
+  },
+  HomeSixthSection: {
+    title: 'Our pricing',
+    tariffs: [
+      {
+        id: '1',
+        title: 'Free trial',
+        price: '00',
+        currency: '$',
+        term: ['Mo', 'Yr'],
+        buttonTitle: 'Choose plan',
+        conditions: ['For small teams – 5 users', 'Community support'],
+      },
+      {
+        id: '2',
+        title: 'Lite',
+        price: '99',
+        currency: '$',
+        term: ['Mo', 'Yr'],
+
+        buttonTitle: 'Choose plan',
+        conditions: [
+          'For small teams – 15 users',
+          'Individual support',
+          'Individual data – 60GB',
+        ],
+      },
+      {
+        id: '3',
+        title: 'Basic',
+        price: '00',
+        currency: '$',
+        term: ['Mo', 'Yr'],
+
+        buttonTitle: 'Choose plan',
+        conditions: [
+          'For small teams – 30 users',
+          'Community support',
+          'Individual data – 12,0GB',
+          'Advanced permissions',
+        ],
+      },
+      {
+        id: '4',
+        title: 'For enterprises',
+        price: 'Custom',
+        term: ['Mo', 'Yr'],
+
+        buttonTitle: 'Choose plan',
+        conditions: [
+          'Unlimited team members',
+          'Individual support',
+          'Unlimited Individual data',
+          'Advanced permissions',
+          'Data history',
+          'Audit log',
+          'All functions included',
+        ],
+      },
+    ],
+  },
+  HomeSeventhSection: {
+    title: 'Our blog',
+    blogs: [
+      {
+        id: '1',
+        image: FirstImageBlogSection,
+        date: '22 June 2022',
+        title: 'ISO 13485 compliance of medical devices',
+        text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure',
+        button: {
+          buttonTitle: 'Read more',
+          ButtonImage: ArrowRight,
+        },
+      },
+      {
+        id: '2',
+        image: SecondImageBlogSection,
+        date: '22 June 2022',
+        title: 'Business analysis helps you  in finance',
+        text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure',
+        button: {
+          buttonTitle: 'Read more',
+          ButtonImage: ArrowRight,
+        },
+      },
+      {
+        id: '3',
+        image: ThirdImageBlogSection,
+        date: '22 June 2022',
+        title: '5 web portal examples your business can learn from',
+        text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure',
+        button: {
+          buttonTitle: 'Read more',
+          ButtonImage: ArrowRight,
+        },
+      },
+      {
+        id: '4',
+        image: ThirdImageBlogSection,
+        date: '22 June 2022',
+        title: '5 web portal examples your business can learn from',
+        text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure',
+        button: {
+          buttonTitle: 'Read more',
+          ButtonImage: ArrowRight,
+        },
       },
     ],
   },

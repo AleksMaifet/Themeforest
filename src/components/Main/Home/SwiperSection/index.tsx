@@ -6,9 +6,10 @@ import 'swiper/css';
 
 import { ReturnComponentType } from '@/commonTypes';
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
-import SwiperController from '@/components/SwiperController';
 import {
   ARROW_SWIPER_NEXT,
+  DEFAULT_SWIPER_DELAY_VALUE,
+  DEFAULT_SWIPER_SPACE_BETWEEN_VALUE,
   ENDING_SWIPER_VALUE,
   STARTING_SWIPER_VALUE,
   SVG_ATTRIBUTES,
@@ -16,6 +17,7 @@ import {
 import theme from '@/theme';
 
 import { Container, ContainerContext, ContainerTitle, ContainerWrapper } from './styles';
+import SwiperController from './SwiperController';
 import { IFifthSection } from './types';
 
 const arrowStyle = {
@@ -28,6 +30,7 @@ const SwiperSection: React.FC<IFifthSection> = ({
   title,
   children,
   autoPlay,
+  spaceBetween,
   prevController,
   nextController,
 }): ReturnComponentType => {
@@ -43,6 +46,7 @@ const SwiperSection: React.FC<IFifthSection> = ({
         setDisableNextSlide(false);
         break;
       case ENDING_SWIPER_VALUE:
+        setDisablePrevSlide(false);
         setDisableNextSlide(prev => !prev);
         break;
       default:
@@ -91,12 +95,12 @@ const SwiperSection: React.FC<IFifthSection> = ({
             onProgress={(_, progress) => handleDisableController(progress)}
             autoplay={
               autoPlay && {
-                delay: 2500,
+                delay: DEFAULT_SWIPER_DELAY_VALUE,
                 disableOnInteraction: false,
               }
             }
             slidesPerView={3}
-            spaceBetween={100}
+            spaceBetween={spaceBetween || DEFAULT_SWIPER_SPACE_BETWEEN_VALUE}
             modules={[Autoplay]}
             className="mySwiper"
           >

@@ -12,7 +12,6 @@ import { ITestimonial } from './types';
 const style = {
   container: {
     width: theme.spaces[19] * 2,
-    height: theme.size.xs,
     boxShadow: theme.boxShadows[2],
     overflow: 'hidden',
   },
@@ -33,7 +32,7 @@ const Testimonial: React.FC<ITestimonial> = ({
       title={<TitleContainer title={name} fontSize={theme.textSize.sm} />}
       description={<TextContainer text={position} />}
     />
-    <TextContainer text={comment} top={theme.spaces[5]} />
+    <TextContainer text={comment} top={theme.spaces[5]} maxLines={8} />
   </Card>
 );
 

@@ -11,12 +11,16 @@ const PrimaryButton: React.FC<IPrimaryButton<Partial<StyleOptionsType>>> = ({
   styleOptions,
   isDisabled,
   callback,
+  reverse,
+  boxShadow,
 }): ReturnComponentType => (
   <ButtonWrapper
     onClick={callback}
     styleOptions={styleOptions}
     flex={title}
     disabled={isDisabled}
+    reverse={reverse}
+    boxShadow={boxShadow}
   >
     {icon || null}
     {title ? <span>{title}</span> : null}

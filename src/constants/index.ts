@@ -3,3 +3,4 @@ export * from './links';
 export * from './buttonsTitle';
 export * from './stylesValue';
 export * from './common';
+export * from './actions';

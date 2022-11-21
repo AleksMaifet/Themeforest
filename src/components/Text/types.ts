@@ -4,4 +4,5 @@ export interface ITextContainer {
   top?: number;
   bottom?: number;
   width?: number;
+  maxLines?: number;
 }

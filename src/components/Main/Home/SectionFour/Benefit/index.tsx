@@ -9,7 +9,6 @@ import { IBenefit } from './types';
 
 const style = {
   width: theme.spaces[17] * 2,
-  height: theme.spaces[16] * 2,
   boxShadow: theme.boxShadows[2],
   overflow: 'hidden',
 };

@@ -4,5 +4,5 @@ import theme from '@/theme';
 
 export const ButtonWrapper = styled.div`
   position: absolute;
-  bottom: -${theme.spaces[4] + 3}%;
+  bottom: -${theme.spaces[14]}%;
 `;
