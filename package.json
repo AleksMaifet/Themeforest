@@ -6,8 +6,8 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
     "eslint:test": "eslint src --ext .ts,.tsx",
     "eslint:fix": "eslint --fix src --ext .ts,.tsx",
     "predeploy": "npm run build",
