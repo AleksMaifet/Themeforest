@@ -42,13 +42,17 @@ const Rate: React.FC<IRate> = ({
                 key={`${el + index}`}
                 title={el}
                 styleOptions={buttonStyle.secondary}
-                boxShadow
+                borderRadius
               />
             ))}
           </ButtonContainer>
         </PriceContent>
       </RateWrapper>
-      <PrimaryButton title={buttonTitle} styleOptions={buttonStyle.primary} />
+      <PrimaryButton
+        title={buttonTitle}
+        styleOptions={buttonStyle.primary}
+        borderRadius
+      />
       <ConditionList>
         {conditions.map((el, index) => (
           <ConditionItem key={`${el + index}`}>{el}</ConditionItem>

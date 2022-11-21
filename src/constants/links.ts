@@ -1,4 +1,4 @@
-const enum PAGE {
+export enum PAGE {
   HOME = 'Home',
   BLOG = 'Blog',
   SOLUTIONS = 'Solutions',

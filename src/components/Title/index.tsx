@@ -11,8 +11,15 @@ const TitleContainer: React.FC<ITitleContainer> = ({
   top,
   bottom,
   center,
+  color,
 }): ReturnComponentType => (
-  <TitleWrapper top={top} bottom={bottom} center={center} fontSize={fontSize}>
+  <TitleWrapper
+    top={top}
+    bottom={bottom}
+    center={center}
+    fontSize={fontSize}
+    color={color}
+  >
     {title}
   </TitleWrapper>
 );

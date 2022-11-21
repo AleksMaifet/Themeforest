@@ -3,9 +3,9 @@ import React, { memo } from 'react';
 import { ReturnComponentType } from '@/commonTypes';
 
 import { ButtonWrapper } from './styles';
-import { IPrimaryButton, StyleOptionsType } from './types';
+import { IPrimaryButton, StyleOptionsButtonType } from './types';
 
-const PrimaryButton: React.FC<IPrimaryButton<Partial<StyleOptionsType>>> = ({
+const PrimaryButton: React.FC<IPrimaryButton<Partial<StyleOptionsButtonType>>> = ({
   title,
   icon,
   styleOptions,
@@ -13,6 +13,7 @@ const PrimaryButton: React.FC<IPrimaryButton<Partial<StyleOptionsType>>> = ({
   callback,
   reverse,
   boxShadow,
+  borderRadius,
 }): ReturnComponentType => (
   <ButtonWrapper
     onClick={callback}
@@ -21,6 +22,7 @@ const PrimaryButton: React.FC<IPrimaryButton<Partial<StyleOptionsType>>> = ({
     disabled={isDisabled}
     reverse={reverse}
     boxShadow={boxShadow}
+    borderRadius={borderRadius}
   >
     {icon || null}
     {title ? <span>{title}</span> : null}

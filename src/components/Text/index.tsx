@@ -12,6 +12,7 @@ const TextContainer: React.FC<ITextContainer> = ({
   bottom,
   width,
   maxLines,
+  color,
 }): ReturnComponentType => (
   <TextWrapper
     width={width}
@@ -19,6 +20,7 @@ const TextContainer: React.FC<ITextContainer> = ({
     bottom={bottom}
     fontSize={fontSize}
     maxLines={maxLines}
+    color={color}
   >
     {text}
   </TextWrapper>

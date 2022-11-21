@@ -2,9 +2,11 @@ import styled from 'styled-components';
 
 import theme from '@/theme';
 
-import { PrimaryButtonWrapperType, StyleOptionsType } from './types';
+import { PrimaryButtonWrapperType, StyleOptionsButtonType } from './types';
 
-export const ButtonWrapper = styled.button<PrimaryButtonWrapperType<StyleOptionsType>>`
+export const ButtonWrapper = styled.button<
+  PrimaryButtonWrapperType<StyleOptionsButtonType>
+>`
   display: inline-flex;
   justify-content: ${({ flex }) => (flex ? 'space-evenly' : 'center')};
   align-items: center;
@@ -14,8 +16,10 @@ export const ButtonWrapper = styled.button<PrimaryButtonWrapperType<StyleOptions
   background-color: ${({ styleOptions }) =>
     styleOptions?.backGroundColor || theme.colors.Primary};
   font-family: ${theme.fontFamily[0]};
-  border-radius: ${theme.spaces[1]}px;
+  border-radius: ${({ borderRadius }) =>
+    borderRadius ? theme.spaces[1] : theme.spaces[0]}px;
   cursor: pointer;
+  font-weight: bold;
   box-shadow: ${({ boxShadow }) => (boxShadow ? theme.boxShadows[0] : 'none')};
   transition: ease 0.3s;
   margin: ${({ styleOptions }) => styleOptions?.margin || theme.spaces[0]}px 0;

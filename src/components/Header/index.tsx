@@ -36,6 +36,8 @@ const Header = (): ReturnComponentType => {
           icon={<IconPlay />}
           callback={handleVideo}
           isDisabled={isVideoShow}
+          boxShadow
+          borderRadius
         />
       </ContainerWrapper>
     </HeaderContainer>

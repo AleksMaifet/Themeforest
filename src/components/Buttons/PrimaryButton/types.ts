@@ -8,9 +8,10 @@ export interface IPrimaryButton<T> {
   callback?: (e: MouseEvent<HTMLButtonElement>) => void;
   boxShadow?: boolean;
   reverse?: boolean;
+  borderRadius?: boolean;
 }
 
-export type StyleOptionsType = {
+export type StyleOptionsButtonType = {
   width: number;
   color: string;
   backGroundColor: string;
@@ -23,4 +24,5 @@ export type PrimaryButtonWrapperType<T> = {
   flex?: string;
   boxShadow?: boolean;
   reverse?: boolean;
+  borderRadius?: boolean;
 };

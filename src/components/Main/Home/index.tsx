@@ -60,7 +60,7 @@ const HomePageMain = (): ReturnComponentType => (
       spacing={theme.spaces[17]}
       flex={sectionStyle[1]}
     >
-      <PrimaryButton title={ANALYTICS_BUTTON_TITLE} />
+      <PrimaryButton title={ANALYTICS_BUTTON_TITLE} boxShadow borderRadius />
     </FirstSection>
     <SecondSection
       title={
@@ -77,7 +77,7 @@ const HomePageMain = (): ReturnComponentType => (
       }
       image={<Image context={SecondImageHomeSection} />}
     >
-      <PrimaryButton title={NEW_SOLUTION_BUTTON_TITLE} />
+      <PrimaryButton title={NEW_SOLUTION_BUTTON_TITLE} boxShadow borderRadius />
     </SecondSection>
     <SectionThree
       title={

@@ -5,4 +5,5 @@ export interface ITextContainer {
   bottom?: number;
   width?: number;
   maxLines?: number;
+  color?: string;
 }

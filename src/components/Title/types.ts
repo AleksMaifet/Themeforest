@@ -4,4 +4,5 @@ export interface ITitleContainer {
   center?: boolean;
   top?: number;
   bottom?: number;
+  color?: string;
 }
