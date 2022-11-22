@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Themeforest/static/css/main.1705e7d3.css",
-    "main.js": "/Themeforest/static/js/main.fba16db3.js",
+    "main.js": "/Themeforest/static/js/main.4c39ab17.js",
     "static/media/videoBg.mp4": "/Themeforest/static/media/videoBg.56441fcbb87daf6a532a.mp4",
     "static/media/home1.png": "/Themeforest/static/media/home1.86903707f79ebe2bd67e.png",
     "static/media/home2.png": "/Themeforest/static/media/home2.04cea973a6c582426f78.png",
@@ -13,19 +13,26 @@
     "static/media/person2.png": "/Themeforest/static/media/person2.ce0a914f65e4d7b7f34c.png",
     "static/media/person1.png": "/Themeforest/static/media/person1.dd9821f7efb9b0c747a7.png",
     "static/media/machine.svg": "/Themeforest/static/media/machine.7dc2d6be7243df2779f1a394bf71841a.svg",
-    "static/media/logo.svg": "/Themeforest/static/media/logo.cd8cf3528b35cdd930fef42edbece259.svg",
+    "static/media/logo.svg": "/Themeforest/static/media/logo.44cfa64f3d6d122c741b8fd3764740de.svg",
+    "static/media/white_logo.svg": "/Themeforest/static/media/white_logo.c1df1ff22befc9cee0ed508956881137.svg",
     "static/media/embed_analytics.svg": "/Themeforest/static/media/embed_analytics.4a96eba3d4914cd1f38cb4a9b0e71b2c.svg",
+    "static/media/social-5.svg": "/Themeforest/static/media/social-5.b4f80d54c44aac4ac4849f1329b7b7c4.svg",
     "static/media/icon_play.svg": "/Themeforest/static/media/icon_play.14a523483b41f52d16bae58985030aca.svg",
     "static/media/access.svg": "/Themeforest/static/media/access.d217ddf7aef8872d013d4535d395963e.svg",
+    "static/media/social-2.svg": "/Themeforest/static/media/social-2.ba599cbb09b1558fa7915ebf7dd2ade0.svg",
+    "static/media/social-1.svg": "/Themeforest/static/media/social-1.152932848b0542f2101c758c12738ca7.svg",
     "static/media/icon_arrow_right.svg": "/Themeforest/static/media/icon_arrow_right.1cba2c5a510690ff4d41b39e9e5c8d15.svg",
     "static/media/icon_arrow_left.svg": "/Themeforest/static/media/icon_arrow_left.67190dcfc08b492bfefd95454ea6f2f0.svg",
     "static/media/data_analytics.svg": "/Themeforest/static/media/data_analytics.0812581fe5e326332964b259121df77a.svg",
+    "static/media/social-3.svg": "/Themeforest/static/media/social-3.ac37bbbd56a3f8b011c1b3fdbe1874fc.svg",
     "index.html": "/Themeforest/index.html",
+    "static/media/social-4.svg": "/Themeforest/static/media/social-4.af2780dab8792fe2e99954683a16e466.svg",
+    "static/media/social-6.svg": "/Themeforest/static/media/social-6.b24d6c9330f4a70d4c227d58a1cd4c0f.svg",
     "main.1705e7d3.css.map": "/Themeforest/static/css/main.1705e7d3.css.map",
-    "main.fba16db3.js.map": "/Themeforest/static/js/main.fba16db3.js.map"
+    "main.4c39ab17.js.map": "/Themeforest/static/js/main.4c39ab17.js.map"
   },
   "entrypoints": [
     "static/css/main.1705e7d3.css",
-    "static/js/main.fba16db3.js"
+    "static/js/main.4c39ab17.js"
   ]
 }
