@@ -5,7 +5,7 @@ import { ReturnComponentType } from '@/commonTypes';
 import { TextWrapper } from './styles';
 import { ITextContainer } from './types';
 
-const TextContainer: React.FC<ITextContainer> = ({
+const TextComponent: React.FC<ITextContainer> = ({
   text,
   fontSize,
   top,
@@ -26,4 +26,4 @@ const TextContainer: React.FC<ITextContainer> = ({
   </TextWrapper>
 );
 
-export default memo(TextContainer);
+export default memo(TextComponent);

@@ -8,7 +8,7 @@ import GlobalStyles from '@/globalStyles';
 import { HomePageSection } from '@/mocks';
 
 export default {
-  title: 'Container',
+  title: 'Containers',
   component: Rate,
 };
 

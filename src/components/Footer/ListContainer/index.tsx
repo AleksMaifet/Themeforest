@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 
 import { ReturnComponentType } from '@/commonTypes';
-import TitleContainer from '@/components/Title';
+import TitleComponent from '@/components/Title';
 import theme from '@/theme';
 
 import { Container, ItemLine, ItemList } from './styles';
@@ -11,7 +11,7 @@ const ListContainer: React.FC<IListContainer> = ({
   value: { title, items },
 }): ReturnComponentType => (
   <Container>
-    <TitleContainer
+    <TitleComponent
       title={title}
       color={theme.colors.White}
       fontSize={theme.textSize.sm}

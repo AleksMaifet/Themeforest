@@ -17,7 +17,7 @@ const { HomeFirstSection } = HomePageSection;
 const { FirstImageHomeSection } = PNG;
 
 export default {
-  title: 'Section',
+  title: 'Sections',
   component: FirstSection,
 };
 

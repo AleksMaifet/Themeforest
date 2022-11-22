@@ -3,8 +3,8 @@ import React, { memo } from 'react';
 import { Avatar, Card } from 'antd';
 
 import { ReturnComponentType } from '@/commonTypes';
-import TextContainer from '@/components/Text';
-import TitleContainer from '@/components/Title';
+import TextComponent from '@/components/Text';
+import TitleComponent from '@/components/Title';
 import theme from '@/theme';
 
 import { ITestimonial } from './types';
@@ -29,10 +29,10 @@ const Testimonial: React.FC<ITestimonial> = ({
     <Meta
       style={style.metaStyle}
       avatar={<Avatar size={65} src={image} />}
-      title={<TitleContainer title={name} fontSize={theme.textSize.sm} />}
-      description={<TextContainer text={position} />}
+      title={<TitleComponent title={name} fontSize={theme.textSize.sm} />}
+      description={<TextComponent text={position} />}
     />
-    <TextContainer text={comment} top={theme.spaces[5]} maxLines={8} />
+    <TextComponent text={comment} top={theme.spaces[5]} maxLines={8} />
   </Card>
 );
 

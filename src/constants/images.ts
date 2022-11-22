@@ -8,7 +8,8 @@ import { ReactComponent as Embed } from '@/assets/embed_analytics.svg';
 import FirstImageHomeSection from '@/assets/home/home1.png';
 import SecondImageHomeSection from '@/assets/home/home2.png';
 import { ReactComponent as IconPlay } from '@/assets/icon_play.svg';
-import { ReactComponent as LogoApp } from '@/assets/logo.svg';
+import { ReactComponent as LogoApp } from '@/assets/logo/logo.svg';
+import LogoWhiteApp from '@/assets/logo/white_logo.png';
 import { ReactComponent as Machine } from '@/assets/machine.svg';
 import { ReactComponent as BehanceIcon } from '@/assets/socials/social-1.svg';
 import { ReactComponent as TwitterIcon } from '@/assets/socials/social-2.svg';
@@ -22,7 +23,6 @@ import FirstTestimonialPerson from '@/assets/swiper_persons/person1.png';
 import SecondTestimonialPerson from '@/assets/swiper_persons/person2.png';
 import ThirdTestimonialPerson from '@/assets/swiper_persons/person3.png';
 import VideoBg from '@/assets/videoBg.mp4';
-import { ReactComponent as LogoWhiteApp } from '@/assets/white_logo.svg';
 
 export const SVG = {
   IconPlay,
@@ -56,4 +56,5 @@ export const PNG = {
   FirstImageBlogSection,
   SecondImageBlogSection,
   ThirdImageBlogSection,
+  LogoWhiteApp,
 };

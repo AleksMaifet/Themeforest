@@ -7,3 +7,4 @@ export const STARTING_SWIPER_VALUE = 0;
 export const ENDING_SWIPER_VALUE = 1;
 export const DEFAULT_SWIPER_DELAY_VALUE = 2500;
 export const DEFAULT_SWIPER_SPACE_BETWEEN_VALUE = 0;
+export const ERROR_TITLE = 'Something wrong!';

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import { Card } from 'antd';
 
 import { ReturnComponentType } from '@/commonTypes';
 import theme from '@/theme';
 
+import { Line } from './styles';
 import { IBenefit } from './types';
 
 const style = {
@@ -16,9 +17,9 @@ const style = {
 const Benefit: React.FC<IBenefit> = ({ title, text, children }): ReturnComponentType => (
   <Card style={style}>
     {children}
-    {title}
+    <Line>{title}</Line>
     {text}
   </Card>
 );
 
-export default Benefit;
+export default memo(Benefit);

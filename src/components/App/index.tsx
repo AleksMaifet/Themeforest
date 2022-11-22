@@ -1,16 +1,15 @@
 import React from 'react';
-import 'antd/dist/antd.less';
 
 import { ReturnComponentType } from '@/commonTypes';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import HomePageMain from '@/components/Main/Home';
 import Provider from '@/components/Provider';
+import RoutContainer from '@/components/RoutContainer';
 
 const App = (): ReturnComponentType => (
   <Provider>
     <Header />
-    <HomePageMain />
+    <RoutContainer />
     <Footer />
   </Provider>
 );

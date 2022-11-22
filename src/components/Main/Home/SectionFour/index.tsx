@@ -2,8 +2,8 @@ import React, { memo } from 'react';
 
 import { ReturnComponentType } from '@/commonTypes';
 import Image from '@/components/Image';
-import TextContainer from '@/components/Text';
-import TitleContainer from '@/components/Title';
+import TextComponent from '@/components/Text';
+import TitleComponent from '@/components/Title';
 import { HomePageSection } from '@/mocks';
 import theme from '@/theme';
 
@@ -37,14 +37,14 @@ const FourthSection: React.FC<IFourthSection> = ({
             <Benefit
               key={id}
               title={
-                <TitleContainer
+                <TitleComponent
                   title={title}
                   fontSize={theme.textSize.md}
                   top={theme.spaces[2]}
                   bottom={theme.spaces[2]}
                 />
               }
-              text={<TextContainer text={text} maxLines={4} />}
+              text={<TextComponent text={text} maxLines={4} />}
             >
               <Image context={<Img />} />
             </Benefit>

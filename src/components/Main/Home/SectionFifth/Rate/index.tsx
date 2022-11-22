@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 
 import { ReturnComponentType } from '@/commonTypes';
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
-import TitleContainer from '@/components/Title';
+import TitleComponent from '@/components/Title';
 import theme from '@/theme';
 
 import {
@@ -33,9 +33,9 @@ const Rate: React.FC<IRate> = ({
   return (
     <RateContainer>
       <RateWrapper>
-        <TitleContainer title={title} fontSize={theme.textSize.sm} />
+        <TitleComponent title={title} fontSize={theme.textSize.sm} />
         <PriceContent>
-          <TitleContainer title={titleCard} fontSize={theme.textSize.md} />
+          <TitleComponent title={titleCard} fontSize={theme.textSize.md} />
           <ButtonContainer>
             {term.map((el, index) => (
               <PrimaryButton

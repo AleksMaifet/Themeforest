@@ -2,8 +2,8 @@ import React from 'react';
 
 import { ReturnComponentType } from '@/commonTypes';
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
-import TextContainer from '@/components/Text';
-import TitleContainer from '@/components/Title';
+import TextComponent from '@/components/Text';
+import TitleComponent from '@/components/Title';
 import { CONTACT_BUTTON_TITLE } from '@/constants';
 import { HomePageSection } from '@/mocks';
 import theme from '@/theme';
@@ -17,8 +17,8 @@ const {
 const SixthSection = (): ReturnComponentType => (
   <Container>
     <ContainerWrapper>
-      <TitleContainer title={title} />
-      <TextContainer
+      <TitleComponent title={title} />
+      <TextComponent
         text={text}
         top={theme.spaces[6]}
         bottom={theme.spaces[6]}

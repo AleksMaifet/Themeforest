@@ -2,10 +2,11 @@ import React from 'react';
 
 import { ReturnComponentType } from '@/commonTypes';
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
+import Image from '@/components/Image';
 import PrimaryInput from '@/components/Input';
-import TextContainer from '@/components/Text';
-import TitleContainer from '@/components/Title';
-import { FOOTER_INPUT, SVG } from '@/constants';
+import TextComponent from '@/components/Text';
+import TitleComponent from '@/components/Title';
+import { FOOTER_INPUT, PNG } from '@/constants';
 import { FooterSection } from '@/mocks';
 import theme from '@/theme';
 
@@ -25,7 +26,7 @@ import {
 
 const { PLACEHOLDER_TITLE, BUTTON_TITLE } = FOOTER_INPUT;
 
-const { LogoWhiteApp } = SVG;
+const { LogoWhiteApp } = PNG;
 
 const {
   title,
@@ -53,12 +54,12 @@ const Footer = (): ReturnComponentType => (
     <ContainerWrapper>
       <EmailContainer>
         <EmailTitleContainer>
-          <TitleContainer
+          <TitleComponent
             title={title}
             color={theme.colors.White}
             bottom={theme.spaces[5]}
           />
-          <TextContainer text={text} color={theme.colors.White} />
+          <TextComponent text={text} color={theme.colors.White} />
         </EmailTitleContainer>
         <PrimaryInput
           placeholderTitle={PLACEHOLDER_TITLE}
@@ -68,8 +69,8 @@ const Footer = (): ReturnComponentType => (
       </EmailContainer>
       <InformationalContainer>
         <SocialContainer>
-          <LogoWhiteApp fill="white" />
-          <TextContainer
+          <Image context={LogoWhiteApp} />
+          <TextComponent
             text={socialText}
             top={theme.spaces[4]}
             bottom={theme.spaces[4]}
@@ -87,10 +88,10 @@ const Footer = (): ReturnComponentType => (
         </Line>
       </InformationalContainer>
       <CopyRightContainer>
-        <TextContainer text={leftBlock} color={theme.colors.HelperBlue2} />
+        <TextComponent text={leftBlock} color={theme.colors.HelperBlue2} />
         <CopyRightWrapper>
-          <TextContainer text={rightBlock.text} color={theme.colors.HelperBlue2} />
-          <TextContainer text={rightBlock.preText} color={theme.colors.HelperBlue2} />
+          <TextComponent text={rightBlock.text} color={theme.colors.HelperBlue2} />
+          <TextComponent text={rightBlock.preText} color={theme.colors.HelperBlue2} />
         </CopyRightWrapper>
       </CopyRightContainer>
     </ContainerWrapper>

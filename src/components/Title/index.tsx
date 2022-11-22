@@ -5,7 +5,7 @@ import { ReturnComponentType } from '@/commonTypes';
 import { TitleWrapper } from './styles';
 import { ITitleContainer } from './types';
 
-const TitleContainer: React.FC<ITitleContainer> = ({
+const TitleComponent: React.FC<ITitleContainer> = ({
   title,
   fontSize,
   top,
@@ -24,4 +24,4 @@ const TitleContainer: React.FC<ITitleContainer> = ({
   </TitleWrapper>
 );
 
-export default memo(TitleContainer);
+export default memo(TitleComponent);

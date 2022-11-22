@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 
 import { ReturnComponentType } from '@/commonTypes';
-import TitleContainer from '@/components/Title';
+import TitleComponent from '@/components/Title';
 import theme from '@/theme';
 
 import Rate from './Rate';
@@ -14,7 +14,7 @@ const FifthSection: React.FC<IFifthSection> = ({
   <Container>
     <ContainerWrapper>
       <TitleWrapper>
-        <TitleContainer title={title} fontSize={theme.textSize.xl} />
+        <TitleComponent title={title} fontSize={theme.textSize.xl} />
       </TitleWrapper>
       <ContainerContent>
         {tariffs.map(el => (

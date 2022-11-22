@@ -7,7 +7,7 @@ import SixthSection from '@/components/Main/Home/SectionSixth';
 import GlobalStyles from '@/globalStyles';
 
 export default {
-  title: 'Section',
+  title: 'Sections',
   component: SixthSection,
 };
 

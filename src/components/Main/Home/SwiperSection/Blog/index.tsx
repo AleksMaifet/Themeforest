@@ -5,8 +5,8 @@ import { Card } from 'antd';
 import { ReturnComponentType } from '@/commonTypes';
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
 import Image from '@/components/Image';
-import TextContainer from '@/components/Text';
-import TitleContainer from '@/components/Title';
+import TextComponent from '@/components/Text';
+import TitleComponent from '@/components/Title';
 import theme from '@/theme';
 
 import { IBlog } from './types';
@@ -39,16 +39,16 @@ const Blog: React.FC<IBlog> = ({
     <Image context={image} />
     <Meta
       description={
-        <TextContainer text={date} top={theme.spaces[4]} bottom={theme.spaces[2]} />
+        <TextComponent text={date} top={theme.spaces[4]} bottom={theme.spaces[2]} />
       }
     />
-    <TitleContainer
+    <TitleComponent
       title={title}
       top={theme.spaces[2]}
       bottom={theme.spaces[2]}
       fontSize={theme.textSize.md}
     />
-    <Meta description={<TextContainer text={text} maxLines={4} />} />
+    <Meta description={<TextComponent text={text} maxLines={4} />} />
     <PrimaryButton
       title={buttonTitle}
       styleOptions={style.buttonStyle}

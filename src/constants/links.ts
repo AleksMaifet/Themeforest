@@ -9,7 +9,7 @@ export enum PAGE {
   FAQ = 'FAQ',
 }
 
-const enum PATH {
+export const enum PATH {
   HOME_PAGE_ROUTE = '/',
   SECOND_PAGE_ROUTE = '/services',
   THIRD_PAGE_ROUTE = '/about',

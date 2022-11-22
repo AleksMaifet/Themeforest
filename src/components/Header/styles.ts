@@ -5,6 +5,9 @@ import theme from '@/theme';
 import { handleContainerStyles } from '@/utills/handleContainerStyles';
 
 export const HeaderContainer = styled.header`
+  position: sticky;
+  top: 0;
+  z-index: 2;
   ${handleContainerStyles(theme.spaces[8], theme.colors.Background)}
 `;
 
