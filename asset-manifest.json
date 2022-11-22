@@ -1,7 +1,10 @@
 {
   "files": {
-    "main.css": "/Themeforest/static/css/main.1705e7d3.css",
-    "main.js": "/Themeforest/static/js/main.20ef8dfe.js",
+    "main.css": "/Themeforest/static/css/main.5be780cf.css",
+    "main.js": "/Themeforest/static/js/main.4b064829.js",
+    "static/css/300.24c39152.chunk.css": "/Themeforest/static/css/300.24c39152.chunk.css",
+    "static/js/300.66e36014.chunk.js": "/Themeforest/static/js/300.66e36014.chunk.js",
+    "static/js/839.c5b6a9c1.chunk.js": "/Themeforest/static/js/839.c5b6a9c1.chunk.js",
     "static/media/videoBg.mp4": "/Themeforest/static/media/videoBg.56441fcbb87daf6a532a.mp4",
     "static/media/home1.png": "/Themeforest/static/media/home1.86903707f79ebe2bd67e.png",
     "static/media/home2.png": "/Themeforest/static/media/home2.04cea973a6c582426f78.png",
@@ -27,11 +30,14 @@
     "index.html": "/Themeforest/index.html",
     "static/media/social-4.svg": "/Themeforest/static/media/social-4.af2780dab8792fe2e99954683a16e466.svg",
     "static/media/social-6.svg": "/Themeforest/static/media/social-6.b24d6c9330f4a70d4c227d58a1cd4c0f.svg",
-    "main.1705e7d3.css.map": "/Themeforest/static/css/main.1705e7d3.css.map",
-    "main.20ef8dfe.js.map": "/Themeforest/static/js/main.20ef8dfe.js.map"
+    "main.5be780cf.css.map": "/Themeforest/static/css/main.5be780cf.css.map",
+    "main.4b064829.js.map": "/Themeforest/static/js/main.4b064829.js.map",
+    "300.24c39152.chunk.css.map": "/Themeforest/static/css/300.24c39152.chunk.css.map",
+    "300.66e36014.chunk.js.map": "/Themeforest/static/js/300.66e36014.chunk.js.map",
+    "839.c5b6a9c1.chunk.js.map": "/Themeforest/static/js/839.c5b6a9c1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1705e7d3.css",
-    "static/js/main.20ef8dfe.js"
+    "static/css/main.5be780cf.css",
+    "static/js/main.4b064829.js"
   ]
 }
