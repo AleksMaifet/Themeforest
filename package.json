@@ -62,8 +62,7 @@
     "styled-components": "^5.3.6",
     "swiper": "^8.4.4",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
-    "webpack": "^5.75.0",
-    "yarn": "^1.22.19"
+    "webpack": "^5.75.0"
   },
   "eslintConfig": {
     "extends": [
