@@ -8,6 +8,7 @@ import Image from '@/components/Image';
 import FifthSection from '@/components/Main/Home/SectionFifth';
 import FourthSection from '@/components/Main/Home/SectionFour';
 import FirstSection from '@/components/Main/Home/SectionOne';
+import SixthSection from '@/components/Main/Home/SectionSixth';
 import SectionThree from '@/components/Main/Home/SectionThree';
 import SecondSection from '@/components/Main/Home/SectionTwo';
 import SwiperSection from '@/components/Main/Home/SwiperSection';
@@ -133,6 +134,7 @@ const HomePageMain = (): ReturnComponentType => (
         </SwiperSlide>
       ))}
     </SwiperSection>
+    <SixthSection />
   </MainContainer>
 );
 

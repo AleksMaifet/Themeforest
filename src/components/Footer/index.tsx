@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 
 import { ReturnComponentType } from '@/commonTypes';
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
@@ -14,6 +14,7 @@ import {
   Container,
   ContainerWrapper,
   CopyRightContainer,
+  CopyRightWrapper,
   EmailContainer,
   EmailTitleContainer,
   InformationalContainer,
@@ -79,19 +80,21 @@ const Footer = (): ReturnComponentType => (
             ))}
           </SocialIconContainer>
         </SocialContainer>
-        {info.map((el, index) => (
-          <ListContainer key={`${el.title + index}`} value={el} />
-        ))}
+        <Line>
+          {info.map((el, index) => (
+            <ListContainer key={`${el.title + index}`} value={el} />
+          ))}
+        </Line>
       </InformationalContainer>
       <CopyRightContainer>
         <TextContainer text={leftBlock} color={theme.colors.HelperBlue2} />
-        <Line>
+        <CopyRightWrapper>
           <TextContainer text={rightBlock.text} color={theme.colors.HelperBlue2} />
           <TextContainer text={rightBlock.preText} color={theme.colors.HelperBlue2} />
-        </Line>
+        </CopyRightWrapper>
       </CopyRightContainer>
     </ContainerWrapper>
   </Container>
 );
 
-export default memo(Footer);
+export default Footer;

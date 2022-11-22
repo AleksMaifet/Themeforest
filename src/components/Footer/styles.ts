@@ -43,6 +43,10 @@ export const SocialIconContainer = styled.div`
   width: ${theme.spaces[14]}%;
 `;
 
+export const Line = styled.div`
+  display: inline-flex;
+`;
+
 export const CopyRightContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -51,7 +55,7 @@ export const CopyRightContainer = styled.div`
   padding: ${theme.spaces[6]}px 0;
 `;
 
-export const Line = styled.div`
+export const CopyRightWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
