@@ -1,9 +1,7 @@
 import React from 'react';
 
-import { addDecorator, Story } from '@storybook/react';
-
-import TextComponent from '@/components/Text';
-import GlobalStyles from '@/globalStyles';
+import { Story } from '@storybook/react';
+import TextComponent from 'src/components/Text';
 
 export default {
   title: 'Components',
@@ -40,10 +38,3 @@ TextComponentExample.args = {
   width: 20,
   maxLines: 2,
 };
-
-addDecorator(story => (
-  <>
-    <GlobalStyles />
-    {story()}
-  </>
-));

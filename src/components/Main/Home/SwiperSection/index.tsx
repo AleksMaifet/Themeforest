@@ -23,7 +23,7 @@ import { IFifthSection } from './types';
 const arrowStyle = {
   width: theme.spaces[9],
   color: 'black',
-  backGroundColor: theme.colors.Background,
+  backgroundColor: theme.colors.Background,
 };
 
 const SwiperSection: React.FC<IFifthSection> = ({

@@ -4,19 +4,11 @@ import { ReturnComponentType } from '@/commonTypes';
 import Image from '@/components/Image';
 import { Context } from '@/components/Provider/contex';
 import { PNG, setShowVideoAC, Video } from '@/constants';
-import theme from '@/theme';
 
-import { Container, ImageContainer, VideoContainer } from './styles';
+import { Container, ImageContainer, VideoContainer, VideoWrapper } from './styles';
 
 const { VideoBg } = Video;
 const { FirstImageHomeSection } = PNG;
-
-const videoStyle = {
-  opacity: theme.opacity.opacity50,
-  objectFit: 'cover' as const,
-  height: '585px',
-  width: `${theme.spaces[14]}%`,
-};
 
 const VideoSection = (): ReturnComponentType => {
   const {
@@ -32,13 +24,7 @@ const VideoSection = (): ReturnComponentType => {
     <Container>
       {isVideoShow ? (
         <VideoContainer>
-          <video
-            style={videoStyle}
-            autoPlay
-            muted
-            src={VideoBg}
-            onEnded={setEndedVideo}
-          />
+          <VideoWrapper autoPlay muted src={VideoBg} onEnded={setEndedVideo} />
         </VideoContainer>
       ) : (
         <ImageContainer>

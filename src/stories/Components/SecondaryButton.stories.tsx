@@ -1,9 +1,7 @@
 import React from 'react';
 
-import { addDecorator, Story } from '@storybook/react';
-
-import SecondaryButton from '@/components/Buttons/SecondaryButton';
-import GlobalStyles from '@/globalStyles';
+import { Story } from '@storybook/react';
+import SecondaryButton from 'src/components/Buttons/SecondaryButton';
 
 export default {
   title: 'Components',
@@ -48,10 +46,3 @@ SecondaryButtonExample.args = {
     padding: 10,
   },
 };
-
-addDecorator(story => (
-  <>
-    <GlobalStyles />
-    {story()}
-  </>
-));

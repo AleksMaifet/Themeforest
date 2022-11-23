@@ -14,7 +14,7 @@ export interface IPrimaryButton<T> {
 export type StyleOptionsButtonType = {
   width: number;
   color: string;
-  backGroundColor: string;
+  backgroundColor: string;
   padding: number;
   margin: number;
 };

@@ -1,10 +1,8 @@
 import React from 'react';
 
-import { addDecorator, Story } from '@storybook/react';
-
-import PrimaryButton from '@/components/Buttons/PrimaryButton';
-import { SVG } from '@/constants';
-import GlobalStyles from '@/globalStyles';
+import { Story } from '@storybook/react';
+import PrimaryButton from 'src/components/Buttons/PrimaryButton';
+import { SVG } from 'src/constants';
 
 const { IconPlay } = SVG;
 
@@ -73,10 +71,3 @@ PrimaryButtonExample.args = {
     padding: 10,
   },
 };
-
-addDecorator(story => (
-  <>
-    <GlobalStyles />
-    {story()}
-  </>
-));

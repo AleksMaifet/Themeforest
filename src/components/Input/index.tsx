@@ -1,21 +1,51 @@
-import React, { memo } from 'react';
+import React, { ForwardedRef, forwardRef, memo } from 'react';
 
 import { ReturnComponentType } from '@/commonTypes';
-import PrimaryButton from '@/components/Buttons/PrimaryButton';
 
-import { Container, InputWrapper } from './styles';
-import { IPrimaryInput, styleOptionsInputType } from './types';
+import { InputWrapper, TextAriaWrapper } from './styles';
+import { FieldElementType, IPrimaryInput, StyleOptionsInputType } from './types';
 
-const PrimaryInput: React.FC<IPrimaryInput<Partial<styleOptionsInputType>>> = ({
-  placeholderTitle,
-  buttonTitle,
-  styleOptionsInput,
-  styleOptionsButton,
-}): ReturnComponentType => (
-  <Container>
-    <InputWrapper placeholder={placeholderTitle} styleOptions={styleOptionsInput} />
-    <PrimaryButton title={buttonTitle} styleOptions={styleOptionsButton} />
-  </Container>
-);
+const PrimaryInput = (
+  {
+    placeholder,
+    styleOptions,
+    textAria,
+    top,
+    bottom,
+    form,
+    error,
+  }: IPrimaryInput<Partial<StyleOptionsInputType>>,
+  ref: ForwardedRef<FieldElementType>,
+): ReturnComponentType => {
+  if (textAria) {
+    return (
+      <TextAriaWrapper
+        ref={ref}
+        placeholder={placeholder}
+        styleOptions={styleOptions}
+        top={top}
+        bottom={bottom}
+        name={form?.name}
+        onChange={form?.onChange}
+        error={error}
+        onBlur={form?.onBlur}
+      />
+    );
+  }
 
-export default memo(PrimaryInput);
+  return (
+    <InputWrapper
+      ref={ref}
+      placeholder={placeholder}
+      styleOptions={styleOptions}
+      top={top}
+      bottom={bottom}
+      name={form?.name}
+      onChange={form?.onChange}
+      error={error}
+      onBlur={form?.onBlur}
+    />
+  );
+};
+
+export default memo(forwardRef(PrimaryInput));

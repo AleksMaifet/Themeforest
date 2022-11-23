@@ -4,3 +4,4 @@ export * from './buttonsTitle';
 export * from './stylesValue';
 export * from './common';
 export * from './actions';
+export * from '@/constants/validation';

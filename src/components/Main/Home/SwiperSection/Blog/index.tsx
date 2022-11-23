@@ -21,7 +21,7 @@ const style = {
   },
   buttonStyle: {
     width: theme.spaces[14],
-    backGroundColor: 'transparent',
+    backgroundColor: 'none',
     color: theme.colors.Primary,
   },
 };

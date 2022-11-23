@@ -1,9 +1,7 @@
 import React from 'react';
 
-import { addDecorator, Story } from '@storybook/react';
-
-import TitleComponent from '@/components/Title';
-import GlobalStyles from '@/globalStyles';
+import { Story } from '@storybook/react';
+import TitleComponent from 'src/components/Title';
 
 export default {
   title: 'Components',
@@ -32,10 +30,3 @@ TitleComponentExample.args = {
   title: 'SomeText',
   fontSize: 3,
 };
-
-addDecorator(story => (
-  <>
-    <GlobalStyles />
-    {story()}
-  </>
-));

@@ -14,7 +14,7 @@ export const ButtonWrapper = styled.button<
   width: ${({ styleOptions }) => styleOptions?.width || theme.spaces[13] * 2}px;
   padding: ${({ styleOptions }) => styleOptions?.padding || theme.spaces[2]}px 0;
   background-color: ${({ styleOptions }) =>
-    styleOptions?.backGroundColor || theme.colors.Primary};
+    styleOptions?.backgroundColor || theme.colors.Primary};
   font-family: ${theme.fontFamily[0]};
   border-radius: ${({ borderRadius }) =>
     borderRadius ? theme.spaces[1] : theme.spaces[0]}px;

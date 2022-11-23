@@ -3,13 +3,13 @@ import React from 'react';
 import { ReturnComponentType } from '@/commonTypes';
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
 import Image from '@/components/Image';
-import PrimaryInput from '@/components/Input';
 import TextComponent from '@/components/Text';
 import TitleComponent from '@/components/Title';
 import { FOOTER_INPUT, PNG } from '@/constants';
 import { FooterSection } from '@/mocks';
 import theme from '@/theme';
 
+import InputContainer from './InputContainer';
 import ListContainer from './ListContainer';
 import {
   Container,
@@ -40,11 +40,14 @@ const style = {
   icon: {
     width: theme.spaces[5],
     padding: 1,
-    backGroundColor: 'none',
+    backgroundColor: 'none',
+  },
+  input: {
+    backgroundColor: theme.colors.HelperBlue3,
   },
   button: {
     width: theme.spaces[16],
-    backGroundColor: theme.colors.White,
+    backgroundColor: theme.colors.White,
     color: theme.colors.Black,
   },
 };
@@ -61,10 +64,11 @@ const Footer = (): ReturnComponentType => (
           />
           <TextComponent text={text} color={theme.colors.White} />
         </EmailTitleContainer>
-        <PrimaryInput
+        <InputContainer
           placeholderTitle={PLACEHOLDER_TITLE}
           buttonTitle={BUTTON_TITLE}
           styleOptionsButton={style.button}
+          styleOptionsInput={style.input}
         />
       </EmailContainer>
       <InformationalContainer>

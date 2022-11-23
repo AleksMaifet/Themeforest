@@ -13,6 +13,13 @@ export const VideoContainer = styled.div`
   animation: ${theme.animation.spawnAnimation} ease 0.3s;
 `;
 
+export const VideoWrapper = styled.video`
+  opacity: ${theme.opacity.opacity50};
+  object-fit: cover;
+  height: ${theme.spaces[19] * 4}px;
+  width: ${theme.spaces[14]}%;
+`;
+
 export const ImageContainer = styled.div`
   animation: ${theme.animation.spawnAnimation} ease 0.3s;
 `;
