@@ -2,14 +2,14 @@ import React from 'react';
 
 import { ReturnComponentType } from '@/commonTypes';
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
+import EmailForm from '@/components/Forms/EmailForm';
 import Image from '@/components/Image';
 import TextComponent from '@/components/Text';
 import TitleComponent from '@/components/Title';
-import { FOOTER_INPUT, PNG } from '@/constants';
+import { FORM_TITLE, PNG } from '@/constants';
 import { FooterSection } from '@/mocks';
 import theme from '@/theme';
 
-import InputContainer from './InputContainer';
 import ListContainer from './ListContainer';
 import {
   Container,
@@ -24,7 +24,7 @@ import {
   SocialIconContainer,
 } from './styles';
 
-const { PLACEHOLDER_TITLE, BUTTON_TITLE } = FOOTER_INPUT;
+const { PLACEHOLDER_EMAIL, BUTTON } = FORM_TITLE;
 
 const { LogoWhiteApp } = PNG;
 
@@ -64,9 +64,9 @@ const Footer = (): ReturnComponentType => (
           />
           <TextComponent text={text} color={theme.colors.White} />
         </EmailTitleContainer>
-        <InputContainer
-          placeholderTitle={PLACEHOLDER_TITLE}
-          buttonTitle={BUTTON_TITLE}
+        <EmailForm
+          placeholderTitle={PLACEHOLDER_EMAIL}
+          buttonTitle={BUTTON}
           styleOptionsButton={style.button}
           styleOptionsInput={style.input}
         />

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ReturnComponentType } from '@/commonTypes';
-import Form from '@/components/Form';
+import Form from '@/components/Forms/Form';
 
 export default {
   title: 'Components',

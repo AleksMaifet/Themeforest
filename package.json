@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@craco/craco": "^7.0.0",
+    "@emailjs/browser": "^3.9.1",
     "@hookform/resolvers": "^2.9.10",
     "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.13",

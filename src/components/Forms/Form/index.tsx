@@ -1,14 +1,15 @@
 import React from 'react';
 
-import { yupResolver } from '@hookform/resolvers/yup';
+import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { object, string } from 'yup';
 
 import { ReturnComponentType } from '@/commonTypes';
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
+import { IForm } from '@/components/Forms/types';
 import PrimaryInput from '@/components/Input';
-import { AMOUNT_SYMBOLS, ERROR_MESSAGE } from '@/constants';
+import { FORM_TITLE, schema } from '@/constants';
 import theme from '@/theme';
+import { sendEmailMessage } from '@/utills';
 
 import {
   ErrorMessage,
@@ -17,6 +18,14 @@ import {
   FormWrapper,
   Line,
 } from './styles';
+
+const {
+  PLACEHOLDER_EMAIL,
+  PLACEHOLDER_MESSAGE,
+  PLACEHOLDER_NAME,
+  PLACEHOLDER_THEME,
+  BUTTON,
+} = FORM_TITLE;
 
 const style = {
   firstStage: {
@@ -27,44 +36,14 @@ const style = {
   },
 };
 
-interface IForm {
-  email: string;
-  name: string;
-  topic: string;
-  message: string;
-}
-
-const schema = object({
-  email: string().required(ERROR_MESSAGE.REQUIRED).email(ERROR_MESSAGE.MAIL),
-  name: string()
-    .required(ERROR_MESSAGE.REQUIRED)
-    .max(
-      AMOUNT_SYMBOLS.MAX_NAME,
-      `${ERROR_MESSAGE.MAX_SYMBOLS}${AMOUNT_SYMBOLS.MAX_NAME}`,
-    ),
-  topic: string()
-    .required(ERROR_MESSAGE.REQUIRED)
-    .min(
-      AMOUNT_SYMBOLS.MIN_THEME,
-      `${ERROR_MESSAGE.MIN_SYMBOLS}${AMOUNT_SYMBOLS.MIN_THEME}`,
-    )
-    .max(
-      AMOUNT_SYMBOLS.MAX_THEME,
-      `${ERROR_MESSAGE.MAX_SYMBOLS}${AMOUNT_SYMBOLS.MAX_THEME}`,
-    ),
-  message: string().max(
-    AMOUNT_SYMBOLS.MAX_MESSAGE,
-    `${ERROR_MESSAGE.MAX_SYMBOLS}${AMOUNT_SYMBOLS.MAX_MESSAGE}`,
-  ),
-}).required();
-
 const Form = (): ReturnComponentType => {
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm<IForm>({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(schema.form),
   });
 
   const fieldsRegister = {
@@ -77,7 +56,8 @@ const Form = (): ReturnComponentType => {
   const { email, name, message, topic } = fieldsRegister;
 
   const onSubmit: SubmitHandler<IForm> = data => {
-    console.log(data);
+    sendEmailMessage<IForm>(data);
+    reset();
   };
 
   return (
@@ -85,7 +65,7 @@ const Form = (): ReturnComponentType => {
       <FormInformLine>
         <Line>
           <PrimaryInput
-            placeholder="Your email"
+            placeholder={PLACEHOLDER_EMAIL}
             styleOptions={style.firstStage}
             ref={email.ref}
             form={email}
@@ -95,7 +75,7 @@ const Form = (): ReturnComponentType => {
         </Line>
         <Line>
           <PrimaryInput
-            placeholder="Your name"
+            placeholder={PLACEHOLDER_NAME}
             styleOptions={style.firstStage}
             ref={name.ref}
             form={name}
@@ -106,7 +86,7 @@ const Form = (): ReturnComponentType => {
       </FormInformLine>
       <Line>
         <PrimaryInput
-          placeholder="Theme"
+          placeholder={PLACEHOLDER_THEME}
           styleOptions={style.secondStage}
           ref={topic.ref}
           form={topic}
@@ -117,7 +97,7 @@ const Form = (): ReturnComponentType => {
       <Line>
         <PrimaryInput
           textAria
-          placeholder="Your message"
+          placeholder={PLACEHOLDER_MESSAGE}
           styleOptions={style.secondStage}
           ref={message.ref}
           form={message}
@@ -126,7 +106,7 @@ const Form = (): ReturnComponentType => {
         <ErrorMessage error={errors.message}>{errors.message?.message}</ErrorMessage>
       </Line>
       <FormButtonWrapper>
-        <PrimaryButton title="Send" />
+        <PrimaryButton title={BUTTON} />
       </FormButtonWrapper>
     </FormWrapper>
   );

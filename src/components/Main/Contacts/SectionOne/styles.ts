@@ -9,6 +9,7 @@ export const Container = styled.section`
 
 export const ContainerWrapper = styled.div`
   ${theme.container};
+  align-items: flex-start;
 `;
 
 export const ContainerTitle = styled.h1`
