@@ -22,11 +22,29 @@ export default {
         type: 'text',
       },
     },
+    size: {
+      control: {
+        type: 'number',
+      },
+    },
+    fontSize: {
+      control: {
+        type: 'number',
+      },
+    },
     onClick: { action: 'Clicked' },
   },
 };
 
-const Template: Story<any> = ({ title, styleOptions, color, backgroundColor }) => (
+const Template: Story<any> = ({
+  title,
+  styleOptions,
+  color,
+  backgroundColor,
+  onClick,
+  size,
+  fontSize,
+}) => (
   <SecondaryButton
     title={title}
     styleOptions={{
@@ -34,6 +52,9 @@ const Template: Story<any> = ({ title, styleOptions, color, backgroundColor }) =
       color,
       backGroundColor: backgroundColor,
     }}
+    callback={onClick}
+    size={size}
+    fontSize={fontSize}
   />
 );
 
