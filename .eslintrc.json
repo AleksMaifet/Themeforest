@@ -34,12 +34,7 @@
     "default-param-last": "off",
     "no-use-before-define": "off",
     "react/jsx-props-no-spreading": [
-      "error",
-      {
-        "exceptions": [
-          "FormProvider"
-        ]
-      }
+      "error"
     ],
     "no-multiple-empty-lines": [
       "error",

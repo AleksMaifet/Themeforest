@@ -7,8 +7,8 @@ import { SecondaryButtonWrapperType, StyleOptionsType } from './types';
 export const ButtonWrapper = styled.button<SecondaryButtonWrapperType<StyleOptionsType>>`
   position: relative;
   z-index: 1;
-  width: ${theme.spaces[14] + 20}px;
-  height: ${theme.spaces[14] + 20}px;
+  width: ${({ size }) => size || theme.spaces[14] + 20}px;
+  height: ${({ size }) => size || theme.spaces[14] + 20}px;
   box-shadow: 0 0 0 ${theme.spaces[2]}px ${theme.colors.White};
   border-radius: 50%;
   background-color: ${({ styleOptions }) =>
@@ -29,7 +29,7 @@ export const ButtonWrapper = styled.button<SecondaryButtonWrapperType<StyleOptio
   }
 
   span {
-    font-size: ${theme.textSize.sm}rem;
+    font-size: ${({ fontSize }) => fontSize || theme.textSize.sm}rem;
     font-family: ${theme.fontFamily[0]};
     color: ${({ styleOptions }) => styleOptions?.color || theme.colors.Tertiary};
   }

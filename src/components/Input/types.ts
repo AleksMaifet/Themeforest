@@ -14,6 +14,7 @@ export interface IPrimaryInput<T> {
     onBlur: FocusEventHandler<FieldElementType>;
   };
   error?: string | boolean;
+  boxShadow?: boolean;
 }
 
 export type StyleOptionsInputType = {
@@ -28,4 +29,5 @@ export type PrimaryInputWrapperType<T> = {
   top?: number;
   bottom?: number;
   error?: string | boolean;
+  boxShadow?: boolean;
 };

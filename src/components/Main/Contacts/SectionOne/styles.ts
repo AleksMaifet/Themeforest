@@ -10,6 +10,19 @@ export const Container = styled.section`
 export const ContainerWrapper = styled.div`
   ${theme.container};
   align-items: flex-start;
+  flex-direction: column;
+`;
+
+export const ContentContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const ContainerInfo = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: ${theme.spaces[10]}%;
 `;
 
 export const ContainerTitle = styled.h1`

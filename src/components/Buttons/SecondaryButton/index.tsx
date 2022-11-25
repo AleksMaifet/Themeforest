@@ -8,8 +8,16 @@ import { ISecondaryButton, StyleOptionsType } from './types';
 const SecondaryButton: React.FC<ISecondaryButton<StyleOptionsType>> = ({
   title,
   styleOptions,
+  callback,
+  size,
+  fontSize,
 }): ReturnComponentType => (
-  <ButtonWrapper styleOptions={styleOptions}>
+  <ButtonWrapper
+    styleOptions={styleOptions}
+    onClick={callback}
+    size={size}
+    fontSize={fontSize}
+  >
     <span>{title}</span>
   </ButtonWrapper>
 );

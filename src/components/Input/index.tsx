@@ -9,6 +9,7 @@ const PrimaryInput = (
   {
     placeholder,
     styleOptions,
+    boxShadow,
     textAria,
     top,
     bottom,
@@ -29,6 +30,7 @@ const PrimaryInput = (
         onChange={form?.onChange}
         error={error}
         onBlur={form?.onBlur}
+        boxShadow={boxShadow}
       />
     );
   }
@@ -44,6 +46,7 @@ const PrimaryInput = (
       onChange={form?.onChange}
       error={error}
       onBlur={form?.onBlur}
+      boxShadow={boxShadow}
     />
   );
 };

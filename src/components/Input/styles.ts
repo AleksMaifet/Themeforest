@@ -11,6 +11,7 @@ export const InputWrapper = styled.input<PrimaryInputWrapperType<StyleOptionsInp
   background-color: ${({ styleOptions }) =>
     styleOptions?.backgroundColor || theme.colors.Tertiary};
   color: ${({ styleOptions }) => styleOptions?.color || theme.colors.Grey};
+  box-shadow: ${({ boxShadow }) => (boxShadow ? theme.boxShadows[0] : 'none')};
   padding: ${({ styleOptions }) => styleOptions?.padding || theme.spaces[3]}px;
   margin-top: ${({ top }) => top || theme.spaces[0]}px;
   margin-bottom: ${({ bottom }) => bottom || theme.spaces[0]}px;
@@ -30,6 +31,7 @@ export const TextAriaWrapper = styled.textarea<
   background-color: ${({ styleOptions }) =>
     styleOptions?.backgroundColor || theme.colors.Tertiary};
   color: ${({ styleOptions }) => styleOptions?.color || theme.colors.Grey};
+  box-shadow: ${({ boxShadow }) => (boxShadow ? theme.boxShadows[0] : 'none')};
   padding: ${({ styleOptions }) => styleOptions?.padding || theme.spaces[3]}px;
   margin-top: ${({ top }) => top || theme.spaces[0]}px;
   margin-bottom: ${({ bottom }) => bottom || theme.spaces[0]}px;

@@ -70,6 +70,7 @@ const Form = (): ReturnComponentType => {
             ref={email.ref}
             form={email}
             error={errors.email?.message}
+            boxShadow
           />
           <ErrorMessage error={errors.email}>{errors.email?.message}</ErrorMessage>
         </Line>
@@ -80,6 +81,7 @@ const Form = (): ReturnComponentType => {
             ref={name.ref}
             form={name}
             error={errors.name?.message}
+            boxShadow
           />
           <ErrorMessage error={errors.name}>{errors.name?.message}</ErrorMessage>
         </Line>
@@ -91,6 +93,7 @@ const Form = (): ReturnComponentType => {
           ref={topic.ref}
           form={topic}
           error={errors.topic?.message}
+          boxShadow
         />
         <ErrorMessage error={errors.topic}>{errors.topic?.message}</ErrorMessage>
       </Line>
@@ -102,6 +105,7 @@ const Form = (): ReturnComponentType => {
           ref={message.ref}
           form={message}
           error={errors.message?.message}
+          boxShadow
         />
         <ErrorMessage error={errors.message}>{errors.message?.message}</ErrorMessage>
       </Line>
