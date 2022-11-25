@@ -1,11 +1,13 @@
 {
   "files": {
     "main.css": "/Themeforest/static/css/main.5be780cf.css",
-    "main.js": "/Themeforest/static/js/main.b4e09db8.js",
+    "main.js": "/Themeforest/static/js/main.63ca9c92.js",
     "static/css/300.24c39152.chunk.css": "/Themeforest/static/css/300.24c39152.chunk.css",
-    "static/js/300.69121b63.chunk.js": "/Themeforest/static/js/300.69121b63.chunk.js",
-    "static/js/445.2a0dcd50.chunk.js": "/Themeforest/static/js/445.2a0dcd50.chunk.js",
-    "static/js/839.058b32c9.chunk.js": "/Themeforest/static/js/839.058b32c9.chunk.js",
+    "static/js/300.48960be2.chunk.js": "/Themeforest/static/js/300.48960be2.chunk.js",
+    "static/css/152.c8c41a29.chunk.css": "/Themeforest/static/css/152.c8c41a29.chunk.css",
+    "static/js/152.c9d1a454.chunk.js": "/Themeforest/static/js/152.c9d1a454.chunk.js",
+    "static/js/660.149a3976.chunk.js": "/Themeforest/static/js/660.149a3976.chunk.js",
+    "static/js/714.f40f6e3d.chunk.js": "/Themeforest/static/js/714.f40f6e3d.chunk.js",
     "static/media/videoBg.mp4": "/Themeforest/static/media/videoBg.56441fcbb87daf6a532a.mp4",
     "static/media/home1.png": "/Themeforest/static/media/home1.86903707f79ebe2bd67e.png",
     "static/media/home2.png": "/Themeforest/static/media/home2.04cea973a6c582426f78.png",
@@ -28,18 +30,23 @@
     "static/media/icon_arrow_left.svg": "/Themeforest/static/media/icon_arrow_left.67190dcfc08b492bfefd95454ea6f2f0.svg",
     "static/media/data_analytics.svg": "/Themeforest/static/media/data_analytics.0812581fe5e326332964b259121df77a.svg",
     "static/media/social-3.svg": "/Themeforest/static/media/social-3.ac37bbbd56a3f8b011c1b3fdbe1874fc.svg",
+    "static/media/phone.svg": "/Themeforest/static/media/phone.401f77590d93024c9b82d69129ad7175.svg",
+    "static/media/address.svg": "/Themeforest/static/media/address.695a37270b145ed9a6feba01514aab3e.svg",
     "index.html": "/Themeforest/index.html",
     "static/media/social-4.svg": "/Themeforest/static/media/social-4.af2780dab8792fe2e99954683a16e466.svg",
+    "static/media/email.svg": "/Themeforest/static/media/email.d2cd7b6ed630a994881a79212d6f2c14.svg",
     "static/media/social-6.svg": "/Themeforest/static/media/social-6.b24d6c9330f4a70d4c227d58a1cd4c0f.svg",
     "main.5be780cf.css.map": "/Themeforest/static/css/main.5be780cf.css.map",
-    "main.b4e09db8.js.map": "/Themeforest/static/js/main.b4e09db8.js.map",
+    "main.63ca9c92.js.map": "/Themeforest/static/js/main.63ca9c92.js.map",
     "300.24c39152.chunk.css.map": "/Themeforest/static/css/300.24c39152.chunk.css.map",
-    "300.69121b63.chunk.js.map": "/Themeforest/static/js/300.69121b63.chunk.js.map",
-    "445.2a0dcd50.chunk.js.map": "/Themeforest/static/js/445.2a0dcd50.chunk.js.map",
-    "839.058b32c9.chunk.js.map": "/Themeforest/static/js/839.058b32c9.chunk.js.map"
+    "300.48960be2.chunk.js.map": "/Themeforest/static/js/300.48960be2.chunk.js.map",
+    "152.c8c41a29.chunk.css.map": "/Themeforest/static/css/152.c8c41a29.chunk.css.map",
+    "152.c9d1a454.chunk.js.map": "/Themeforest/static/js/152.c9d1a454.chunk.js.map",
+    "660.149a3976.chunk.js.map": "/Themeforest/static/js/660.149a3976.chunk.js.map",
+    "714.f40f6e3d.chunk.js.map": "/Themeforest/static/js/714.f40f6e3d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5be780cf.css",
-    "static/js/main.b4e09db8.js"
+    "static/js/main.63ca9c92.js"
   ]
 }
