@@ -1,13 +1,13 @@
 import React, { memo, useEffect } from 'react';
 
-import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
-import { SubmitHandler, useForm } from 'react-hook-form';
+import { SubmitHandler } from 'react-hook-form';
 
 import { ReturnComponentType } from '@/commonTypes';
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
-import { EmailType } from '@/components/Forms/types';
 import PrimaryInput from '@/components/Input';
 import { NOTIFICATION, schema } from '@/constants';
+import { useHandleForm } from '@/hooks';
+import { EmailType } from '@/hooks/types';
 import { openNotification, sendEmailMessage } from '@/utills';
 
 import { FormWrapper } from './styles';
@@ -22,17 +22,11 @@ const EmailForm: React.FC<IEmailForm> = ({
   styleOptionsButton,
 }): ReturnComponentType => {
   const {
-    register,
-    reset,
-    handleSubmit,
+    fieldsRegister: { email },
     formState: { errors },
-  } = useForm<EmailType>({
-    resolver: yupResolver(schema.email),
-  });
-
-  const { email } = errors;
-
-  const fieldEmail = register('email', { required: true });
+    handleSubmit,
+    reset,
+  } = useHandleForm(schema.email);
 
   const onSubmit: SubmitHandler<EmailType> = data => {
     sendEmailMessage<EmailType>(data);
@@ -40,8 +34,8 @@ const EmailForm: React.FC<IEmailForm> = ({
   };
 
   useEffect(() => {
-    if (email?.message) {
-      openNotification({ message: email?.message, type: ERROR.type });
+    if (errors.email?.message) {
+      openNotification({ message: errors.email?.message, type: ERROR.type });
     }
   });
 
@@ -50,9 +44,9 @@ const EmailForm: React.FC<IEmailForm> = ({
       <PrimaryInput
         placeholder={placeholderTitle}
         styleOptions={styleOptionsInput}
-        ref={fieldEmail.ref}
-        form={fieldEmail}
-        error={email?.message}
+        ref={email.ref}
+        form={email}
+        error={errors.email?.message}
       />
       <PrimaryButton title={buttonTitle} styleOptions={styleOptionsButton} />
     </FormWrapper>

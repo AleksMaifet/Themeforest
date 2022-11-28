@@ -1,13 +1,13 @@
 import React, { memo } from 'react';
 
-import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
-import { SubmitHandler, useForm } from 'react-hook-form';
+import { SubmitHandler } from 'react-hook-form';
 
 import { ReturnComponentType } from '@/commonTypes';
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
-import { IForm, IFormHook } from '@/components/Forms/types';
 import PrimaryInput from '@/components/Input';
 import { schema } from '@/constants';
+import { useHandleForm } from '@/hooks';
+import { IFormHook } from '@/hooks/types';
 import theme from '@/theme';
 import { sendEmailMessage } from '@/utills';
 
@@ -18,6 +18,7 @@ import {
   FormWrapper,
   Line,
 } from './styles';
+import { IForm } from './types';
 
 const style = {
   firstStage: {
@@ -38,20 +39,11 @@ const Form: React.FC<IForm> = ({
   },
 }): ReturnComponentType => {
   const {
-    register,
-    reset,
-    handleSubmit,
+    fieldsRegister,
     formState: { errors },
-  } = useForm<IFormHook>({
-    resolver: yupResolver(schema.form),
-  });
-
-  const fieldsRegister = {
-    email: register('email', { required: true }),
-    name: register('name', { required: true }),
-    topic: register('topic', { required: true }),
-    message: register('message', { required: true }),
-  };
+    handleSubmit,
+    reset,
+  } = useHandleForm(schema.form);
 
   const { email, name, message, topic } = fieldsRegister;
 

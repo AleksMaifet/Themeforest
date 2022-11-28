@@ -60,6 +60,7 @@ const SwiperComponent: React.FC<IFifthSection> = ({
       swiperRef.current?.slideNext();
       return;
     }
+
     swiperRef.current?.slidePrev();
   }, []);
 

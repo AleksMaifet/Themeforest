@@ -1,4 +1,6 @@
-import { object, string } from 'yup';
+import { object, SchemaOf, string } from 'yup';
+
+import { EmailType, FormHookType } from '@/hooks/types';
 
 const enum ERROR_MESSAGE {
   REQUIRED = 'Field is required',
@@ -14,7 +16,7 @@ const enum AMOUNT_SYMBOLS {
   MAX_MESSAGE = 300,
 }
 
-const formValidation = object({
+const formValidation: SchemaOf<FormHookType> = object({
   email: string().required(ERROR_MESSAGE.REQUIRED).email(ERROR_MESSAGE.MAIL),
   name: string()
     .required(ERROR_MESSAGE.REQUIRED)
@@ -38,7 +40,7 @@ const formValidation = object({
   ),
 }).required();
 
-const emailValidation = object({
+const emailValidation: SchemaOf<EmailType> = object({
   email: string().required(ERROR_MESSAGE.REQUIRED).email(ERROR_MESSAGE.MAIL),
 }).required();
 
