@@ -11,10 +11,10 @@ import FirstSection from '@/components/Main/Home/SectionOne';
 import SixthSection from '@/components/Main/Home/SectionSixth';
 import ThirdSection from '@/components/Main/Home/SectionThree';
 import SecondSection from '@/components/Main/Home/SectionTwo';
-import SwiperSection from '@/components/Main/Home/SwiperSection';
-import Blog from '@/components/Main/Home/SwiperSection/Blog';
-import Testimonial from '@/components/Main/Home/SwiperSection/Testimonial';
 import VideoSection from '@/components/Main/Home/VideoSection';
+import SwiperComponent from '@/components/SwiperComponent';
+import Blog from '@/components/SwiperComponent/Blog';
+import Testimonial from '@/components/SwiperComponent/Testimonial';
 import TextComponent from '@/components/Text';
 import TitleComponent from '@/components/Title';
 import { ANALYTICS_BUTTON_TITLE, NEW_SOLUTION_BUTTON_TITLE, PNG, SVG } from '@/constants';
@@ -104,7 +104,7 @@ const HomePage = (): ReturnComponentType => (
       }
       sectionText={<TextComponent text={HomeFourthSection.text} top={theme.spaces[6]} />}
     />
-    <SwiperSection
+    <SwiperComponent
       autoPlay
       spaceBetween={100}
       title={
@@ -118,9 +118,9 @@ const HomePage = (): ReturnComponentType => (
           <Testimonial value={el} />
         </SwiperSlide>
       ))}
-    </SwiperSection>
+    </SwiperComponent>
     <FifthSection value={HomeSixthSection} />
-    <SwiperSection
+    <SwiperComponent
       spaceBetween={10}
       title={
         <TitleComponent title={HomeSeventhSection.title} fontSize={theme.textSize.xl} />
@@ -133,7 +133,7 @@ const HomePage = (): ReturnComponentType => (
           <Blog value={el} />
         </SwiperSlide>
       ))}
-    </SwiperSection>
+    </SwiperComponent>
     <SixthSection />
   </MainContainer>
 );

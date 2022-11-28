@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ReturnComponentType } from '@/commonTypes';
-import Blog from '@/components/Main/Home/SwiperSection/Blog';
+import Blog from '@/components/SwiperComponent/Blog';
 import { HomePageSection } from '@/mocks';
 
 export default {

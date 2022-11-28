@@ -26,7 +26,7 @@ const arrowStyle = {
   backgroundColor: theme.colors.Background,
 };
 
-const SwiperSection: React.FC<IFifthSection> = ({
+const SwiperComponent: React.FC<IFifthSection> = ({
   title,
   children,
   autoPlay,
@@ -112,4 +112,4 @@ const SwiperSection: React.FC<IFifthSection> = ({
   );
 };
 
-export default memo(SwiperSection);
+export default memo(SwiperComponent);

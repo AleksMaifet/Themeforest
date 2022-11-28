@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 import { ReturnComponentType } from '@/commonTypes';
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
-import { IForm } from '@/components/Forms/types';
+import { IForm, IFormHook } from '@/components/Forms/types';
 import PrimaryInput from '@/components/Input';
-import { FORM_TITLE, schema } from '@/constants';
+import { schema } from '@/constants';
 import theme from '@/theme';
 import { sendEmailMessage } from '@/utills';
 
@@ -19,14 +19,6 @@ import {
   Line,
 } from './styles';
 
-const {
-  PLACEHOLDER_EMAIL,
-  PLACEHOLDER_MESSAGE,
-  PLACEHOLDER_NAME,
-  PLACEHOLDER_THEME,
-  BUTTON,
-} = FORM_TITLE;
-
 const style = {
   firstStage: {
     color: theme.colors.Black,
@@ -36,13 +28,21 @@ const style = {
   },
 };
 
-const Form = (): ReturnComponentType => {
+const Form: React.FC<IForm> = ({
+  value: {
+    emailPlaceholder,
+    messagePlaceholder,
+    namePlaceholder,
+    themePlaceholder,
+    buttonTitle,
+  },
+}): ReturnComponentType => {
   const {
     register,
     reset,
     handleSubmit,
     formState: { errors },
-  } = useForm<IForm>({
+  } = useForm<IFormHook>({
     resolver: yupResolver(schema.form),
   });
 
@@ -55,8 +55,8 @@ const Form = (): ReturnComponentType => {
 
   const { email, name, message, topic } = fieldsRegister;
 
-  const onSubmit: SubmitHandler<IForm> = data => {
-    sendEmailMessage<IForm>(data);
+  const onSubmit: SubmitHandler<IFormHook> = data => {
+    sendEmailMessage<IFormHook>(data);
     reset();
   };
 
@@ -65,7 +65,7 @@ const Form = (): ReturnComponentType => {
       <FormInformLine>
         <Line>
           <PrimaryInput
-            placeholder={PLACEHOLDER_EMAIL}
+            placeholder={emailPlaceholder}
             styleOptions={style.firstStage}
             ref={email.ref}
             form={email}
@@ -76,7 +76,7 @@ const Form = (): ReturnComponentType => {
         </Line>
         <Line>
           <PrimaryInput
-            placeholder={PLACEHOLDER_NAME}
+            placeholder={namePlaceholder}
             styleOptions={style.firstStage}
             ref={name.ref}
             form={name}
@@ -88,7 +88,7 @@ const Form = (): ReturnComponentType => {
       </FormInformLine>
       <Line>
         <PrimaryInput
-          placeholder={PLACEHOLDER_THEME}
+          placeholder={themePlaceholder}
           styleOptions={style.secondStage}
           ref={topic.ref}
           form={topic}
@@ -100,7 +100,7 @@ const Form = (): ReturnComponentType => {
       <Line>
         <PrimaryInput
           textAria
-          placeholder={PLACEHOLDER_MESSAGE}
+          placeholder={messagePlaceholder}
           styleOptions={style.secondStage}
           ref={message.ref}
           form={message}
@@ -110,10 +110,10 @@ const Form = (): ReturnComponentType => {
         <ErrorMessage error={errors.message}>{errors.message?.message}</ErrorMessage>
       </Line>
       <FormButtonWrapper>
-        <PrimaryButton title={BUTTON} />
+        <PrimaryButton title={buttonTitle} />
       </FormButtonWrapper>
     </FormWrapper>
   );
 };
 
-export default Form;
+export default memo(Form);

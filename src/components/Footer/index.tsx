@@ -24,7 +24,7 @@ import {
   SocialIconContainer,
 } from './styles';
 
-const { PLACEHOLDER_EMAIL, BUTTON } = FORM_TITLE;
+const { emailPlaceholder, buttonTitle } = FORM_TITLE;
 
 const { LogoWhiteApp } = PNG;
 
@@ -65,8 +65,8 @@ const Footer = (): ReturnComponentType => (
           <TextComponent text={text} color={theme.colors.White} />
         </EmailTitleContainer>
         <EmailForm
-          placeholderTitle={PLACEHOLDER_EMAIL}
-          buttonTitle={BUTTON}
+          placeholderTitle={emailPlaceholder}
+          buttonTitle={buttonTitle}
           styleOptionsButton={style.button}
           styleOptionsInput={style.input}
         />
