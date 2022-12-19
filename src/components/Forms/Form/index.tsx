@@ -56,7 +56,7 @@ const Form: React.FC<IForm> = ({
     <FormWrapper onSubmit={handleSubmit(onSubmit)}>
       <FormInformLine>
         <Line>
-          2
+          asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
           <PrimaryInput
             placeholder={emailPlaceholder}
             styleOptions={style.firstStage}
